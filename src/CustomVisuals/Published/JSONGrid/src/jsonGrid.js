@@ -1193,7 +1193,7 @@ MAQ.getAdjustedRowChunk = function (inputData, width) {
 MAQ.getAdjustedRowChunkAndToolTip = function (inputData, width) {
     width = width || "100";
     width = width.replace("%", "").replace("px", "");
-return "<span class='jsonGridOverflow' title='' + inputData + '' style='width: ' + (width - 15 >= 15 ? width - 15 : 15) + 'px;'>' + inputData + '</span>";
+    return "<span class='jsonGridOverflow' title='' + inputData + '' style='width: ' + (width - 15 >= 15 ? width - 15 : 15) + 'px;'>' + inputData + '</span>";
 };
 MAQ.setViewRecords = function (oCurrentGridConfiguration) {
     /// <disable>JS3058</disable>
@@ -1508,7 +1508,7 @@ MAQ.sortJsonGrid = function (cellObject, sGridName, fieldName) {
                     MAQUtility.addClass(oSortIndicators[iCount], "itemHide");
                 }
                 MAQUtility.removeClass(document.querySelector("#" + sGridName + "Head .jsonGridHeaderAlternate"), "jsonGridHeaderAlternate");
-                oArrow = cellObject.querySelector(".sort" + fieldName.replace(/^(([^<>()\[\].,;:\s@"]+(\.[^<>()\[\].,;:\s@"]+)*)|(".+"))@(([^<>()\[\].,;:\s@"]+\.)+[^<>()\[\].,;:\s@"]{2,})$/g, "_") + "Hand");
+                oArrow = cellObject.querySelector(".sort" + fieldName.replace(/[^a-zA-z0-9]/g, "_") + "Hand");
                 if ("asc" === cellObject.getAttribute("sortorder")) {
                     $(oArrow).html("<span class='desc'></span>");
                     MAQUtility.removeClass(oArrow, "itemHide");
@@ -1516,7 +1516,9 @@ MAQ.sortJsonGrid = function (cellObject, sGridName, fieldName) {
                     $(oArrow).html("<span class='asc'></span>");
                     MAQUtility.removeClass(oArrow, "itemHide");
                 }
-                MAQUtility.addClass(oArrow.parentNode, "jsonGridHeaderAlternate");
+                if (oArrow) {
+                    MAQUtility.addClass(oArrow.parentNode, "jsonGridHeaderAlternate");
+                }
                 if (!oCurrentGridConfiguration.pagination.retainPageOnSort && oCurrentGridConfiguration.totalPages) {
                     oCurrentGridConfiguration.currentPage = 0;
                     MAQ.setViewRecords(oCurrentGridConfiguration);
@@ -1580,7 +1582,7 @@ MAQ.CreatePaginationControl = function (GridConfiguration) {
     if (!GridConfiguration.isWin8App) {
         // Disable previous only if current page is 0 i.e., first page
         if (0 === GridConfiguration.currentPage) {
-          $(oPreviousDiv).html('<span id="' + GridConfiguration.gridName + '_Prev" class="prev cur-pointer click-disabled" active="1" onclick="MAQ.goPrevious(this,\'' + GridConfiguration.gridName + '\')"><</span>');
+            $(oPreviousDiv).html('<span id="' + GridConfiguration.gridName + '_Prev" class="prev cur-pointer click-disabled" active="1" onclick="MAQ.goPrevious(this,\'' + GridConfiguration.gridName + '\')"><</span>');
         } else {
             $(oPreviousDiv).html('<span id="' + GridConfiguration.gridName + '_Prev" class="prev cur-pointer" active="1" onclick="MAQ.goPrevious(this,\'' + GridConfiguration.gridName + '\')"><</span>');
         }
@@ -1726,7 +1728,7 @@ MAQ.setDrillDown = function (sCellValue, iCurrentRow, oGridConfiguration, bEndRo
     return $(oDrillCellContainer).html() + sCellValue;
 };
 MAQ.CreateHTMLTableRow = function (GridConfiguration) {
-    var originalGridData = JSON.parse(JSON.stringify(GridConfiguration.data)); 
+    var originalGridData = JSON.parse(JSON.stringify(GridConfiguration.data));
     for (jCount = 0; jCount < GridConfiguration.data.length; jCount++) {
         obj = {};
         for (iCount = 0; iCount < dataView.table.columns.length; iCount++) {
@@ -1736,7 +1738,7 @@ MAQ.CreateHTMLTableRow = function (GridConfiguration) {
                 name = col.substring(col.indexOf('.') + 1, col.lastIndexOf(')')).replaceAll("\"", "'");
             }
             var format = dataView.table.columns[iCount].format;
-            var formatter = valueFormatter.create({format: format});
+            var formatter = valueFormatter.create({ format: format });
             if (format) {
                 GridConfiguration.data[jCount][name] = formatter.format(GridConfiguration.data[jCount][name]);
             }
