@@ -46,12 +46,7 @@ module powerbi.extensibility.visual {
             fontFamily: <DataViewObjectPropertyIdentifier>{ objectName: 'taskLabels', propertyName: 'fontFamily' },
             width: <DataViewObjectPropertyIdentifier>{ objectName: 'taskLabels', propertyName: 'width' },
             isExpanded: <DataViewObjectPropertyIdentifier>{ objectName: 'taskLabels', propertyName: 'isExpanded' },
-            isHierarchy: <DataViewObjectPropertyIdentifier>{ objectName: 'taskLabels', propertyName: 'isHierarchy' },
-            vertGrid: <DataViewObjectPropertyIdentifier>{ objectName: 'taskLabels', propertyName: 'vertGrid' },
-            fill2: <DataViewObjectPropertyIdentifier>{ objectName: 'taskLabels', propertyName: 'fill2' },
-            horizGrid: <DataViewObjectPropertyIdentifier>{ objectName: 'taskLabels', propertyName: 'horizGrid' },
-            fill3: <DataViewObjectPropertyIdentifier>{ objectName: 'taskLabels', propertyName: 'fill3' }
-
+            isHierarchy: <DataViewObjectPropertyIdentifier>{ objectName: 'taskLabels', propertyName: 'isHierarchy' }
         },
         columnHeader: {
             fill: <DataViewObjectPropertyIdentifier>{ objectName: 'columnHeader', propertyName: 'fill' },
@@ -93,7 +88,7 @@ module powerbi.extensibility.visual {
         },
         categoryColumnsWidth: {
             width: <DataViewObjectPropertyIdentifier>{ objectName: 'categoryColumnsWidth', propertyName: 'width' },
-            isResizeStarted: <DataViewObjectPropertyIdentifier>{ objectName: 'categoryColumnsWidth', propertyName: 'isResizeStarted' }
+            categoryLength: <DataViewObjectPropertyIdentifier>{ objectName: 'categoryColumnsWidth', propertyName: 'categoryLength' }
         },
         sortAttributes: {
             sortOrder: <DataViewObjectPropertyIdentifier>{ objectName: 'sortAttributes', propertyName: 'sortOrder' },

@@ -55,10 +55,6 @@ module powerbi.extensibility.visual {
         width: number;
         isExpanded: boolean;
         isHierarchy: boolean;
-        vertGrid: boolean;
-        fill2: string;
-        horizGrid: boolean;
-        fill3: string;
     }
     export interface IColumnHeaderSettings {
         fill: string;
@@ -108,7 +104,7 @@ module powerbi.extensibility.visual {
 
     export interface ICategoryColumnsWidthSettings {
         width: string;
-        isResizeStarted: string;
+        categoryLength: number;
     }
     export interface IsortAttributesSettings {
         sortOrder: string;
@@ -166,7 +162,7 @@ module powerbi.extensibility.visual {
 
             return {
                 width: DataViewObjects.getValue<string>(objects, properties.width, defaultSettings.width),
-                isResizeStarted: DataViewObjects.getValue<string>(objects, properties.isResizeStarted, defaultSettings.isResizeStarted)
+                categoryLength: DataViewObjects.getValue<number>(objects, properties.categoryLength, defaultSettings.categoryLength)
             };
 
         }
@@ -231,11 +227,7 @@ module powerbi.extensibility.visual {
                 fontFamily: DataViewObjects.getValue<string>(objects, properties.fontFamily, defaultSettings.fontFamily),
                 width: DataViewObjects.getValue<number>(objects, properties.width, defaultSettings.width),
                 isExpanded: DataViewObjects.getValue<boolean>(objects, properties.isExpanded, defaultSettings.isExpanded),
-                isHierarchy: DataViewObjects.getValue<boolean>(objects, properties.isHierarchy, defaultSettings.isHierarchy),
-                vertGrid: DataViewObjects.getValue<boolean>(objects, properties.vertGrid, defaultSettings.vertGrid),
-                fill2: DataViewObjects.getFillColor(objects, properties.fill2, defaultSettings.fill2),
-                horizGrid: DataViewObjects.getValue<boolean>(objects, properties.horizGrid, defaultSettings.horizGrid),
-                fill3: DataViewObjects.getFillColor(objects, properties.fill3, defaultSettings.fill3)
+                isHierarchy: DataViewObjects.getValue<boolean>(objects, properties.isHierarchy, defaultSettings.isHierarchy)
             };
         }
         private static parseColumnHeaderSettings(objects: DataViewObjects, colors: IColorPalette): IColumnHeaderSettings {
@@ -351,11 +343,7 @@ module powerbi.extensibility.visual {
             fontFamily: 'Segoe UI',
             width: 10,
             isExpanded: true,
-            isHierarchy: false,
-            vertGrid: false,
-            fill2: '#ccc',
-            horizGrid: false,
-            fill3: '#ccc'
+            isHierarchy: false
         };
 
         private static columnHeader: IColumnHeaderSettings = {
@@ -406,7 +394,7 @@ module powerbi.extensibility.visual {
 
         private static categoryColumnsWidth: ICategoryColumnsWidthSettings = {
             width: '',
-            isResizeStarted: ''
+            categoryLength: 0
         };
         private static sortAttributes: IsortAttributesSettings = {
             sortOrder: 'asc',

@@ -131,7 +131,7 @@ module powerbi.extensibility.visual {
     const verticalLineClassLiteral: string = '.verticalLine';
     const horizontalLineClassLiteral: string = '.horizontalLine';
     const pxLiteral: string = 'px';
-    const categoryIdLiteral: string = '#category';
+    const categoryIdLiteral: string = '#gantt_category';
     const horizontalLineLiteral: string = 'horizontal-line';
     const columnLiteral: string = 'column';
     const legendLiteral: string = 'legend';
@@ -139,16 +139,16 @@ module powerbi.extensibility.visual {
     const phaseNamesLiteral: string = 'phaseNames';
     const milestoneNamesLiteral: string = 'milestoneNames';
     const stopPropagationLiteral: string = 'stopPropagation';
-    const categoryClassLiteral: string = '.category';
+    const categoryClassLiteral: string = '.gantt_category';
     const taskRowClassLiteral: string = '.task-row';
     const ellipsisLiteral: string = '...';
-    const categoryLiteral: string = 'category';
+    const categoryLiteral: string = 'gantt_category';
     const dotLiteral: string = '.';
     const headerCellLiteral: string = 'headerCell';
     const verticalLineSimpleLiteral: string = 'verticalLine';
     const horizontalLineSimpleLiteral: string = 'horizontalLine';
     const taskRowLiteral: string = 'task-row';
-    const kpiClassLiteral: string = 'kpiClass';
+    const kpiClassLiteral: string = 'gantt_kpiClass';
     const paranthesisStartLiteral: string = '(';
     const paranthesisEndLiteral: string = ')';
     const commaLiteral: string = ',';
@@ -295,66 +295,66 @@ module powerbi.extensibility.visual {
 
     module Selectors {
         export const className: ClassAndSelector = createClassAndSelector('gantt');
-        export const chart: ClassAndSelector = createClassAndSelector('chart');
-        export const chartLine: ClassAndSelector = createClassAndSelector('chart-line');
+        export const chart: ClassAndSelector = createClassAndSelector('gantt_chart');
+        export const chartLine: ClassAndSelector = createClassAndSelector('gantt_chart-line');
         export const body: ClassAndSelector = createClassAndSelector('gantt-body');
-        export const axisGroup: ClassAndSelector = createClassAndSelector('axis');
-        export const domain: ClassAndSelector = createClassAndSelector('domain');
-        export const axisTick: ClassAndSelector = createClassAndSelector('tick');
-        export const tasks: ClassAndSelector = createClassAndSelector('tasks');
-        export const taskGroup: ClassAndSelector = createClassAndSelector('task-group');
-        export const singleTask: ClassAndSelector = createClassAndSelector('task');
-        export const singlePhase: ClassAndSelector = createClassAndSelector('phase');
-        export const taskRect: ClassAndSelector = createClassAndSelector('task-rect');
-        export const taskResource: ClassAndSelector = createClassAndSelector('task-resource');
-        export const errorPanel: ClassAndSelector = createClassAndSelector('errorPanel');
-        export const taskLines: ClassAndSelector = createClassAndSelector('task-lines');
-        export const kpiLines: ClassAndSelector = createClassAndSelector('kpi-lines');
-        export const label: ClassAndSelector = createClassAndSelector('label');
-        export const legendItems: ClassAndSelector = createClassAndSelector('legendItem');
-        export const legendTitle: ClassAndSelector = createClassAndSelector('legendTitle');
-        export const toggleTask: ClassAndSelector = createClassAndSelector('toggle-task');
-        export const toggleTaskGroup: ClassAndSelector = createClassAndSelector('toggle-task-group');
-        export const barPanel: ClassAndSelector = createClassAndSelector('barPanel');
-        export const taskPanel: ClassAndSelector = createClassAndSelector('taskPanel');
-        export const kpiPanel: ClassAndSelector = createClassAndSelector('kpiPanel');
-        export const timeLinePanel: ClassAndSelector = createClassAndSelector('timelinePanel');
-        export const bottomPannel: ClassAndSelector = createClassAndSelector('bottomPanel');
-        export const imagePanel: ClassAndSelector = createClassAndSelector('imagePanel');
-        export const kpiImagePanel: ClassAndSelector = createClassAndSelector('kpiImagePanel');
-        export const drillAllPanel: ClassAndSelector = createClassAndSelector('drillAllPanel');
-        export const drillAllPanel2: ClassAndSelector = createClassAndSelector('drillAllPanel2');
-        export const drillAllSvg: ClassAndSelector = createClassAndSelector('drillAllSvg');
-        export const drillAllSvg2: ClassAndSelector = createClassAndSelector('drillAllSvg2');
-        export const kpiTitlePanel: ClassAndSelector = createClassAndSelector('kpiTitlePanel');
-        export const bottomMilestonePanel: ClassAndSelector = createClassAndSelector('bottomMilestonePanel');
-        export const kpiSvg: ClassAndSelector = createClassAndSelector('kpiSvg');
-        export const backgroundBoxSvg: ClassAndSelector = createClassAndSelector('backGroundBox');
-        export const taskSvg: ClassAndSelector = createClassAndSelector('taskSvg');
-        export const barSvg: ClassAndSelector = createClassAndSelector('barSvg');
-        export const timeLineSvg: ClassAndSelector = createClassAndSelector('timelineSvg');
-        export const imageSvg: ClassAndSelector = createClassAndSelector('imageSvg');
-        export const bottomMilestoneSvg: ClassAndSelector = createClassAndSelector('bottomMilestoneSvg');
-        export const bottomMilestoneGroup: ClassAndSelector = createClassAndSelector('bottom-milestone-group');
-        export const bottomTaskDiv: ClassAndSelector = createClassAndSelector('bottomTaskDiv');
-        export const bottomTaskSvg: ClassAndSelector = createClassAndSelector('bottomTaskSvg');
-        export const gridGroup: ClassAndSelector = createClassAndSelector('grids');
-        export const todayIndicator: ClassAndSelector = createClassAndSelector('today-indicator');
-        export const todayText: ClassAndSelector = createClassAndSelector('today-text');
-        export const todayGroup: ClassAndSelector = createClassAndSelector('today-group');
-        export const legendPanel: ClassAndSelector = createClassAndSelector('legendPanel');
-        export const legendSvg: ClassAndSelector = createClassAndSelector('legendSvg');
-        export const legendGroup: ClassAndSelector = createClassAndSelector('legendGroup');
-        export const legendText: ClassAndSelector = createClassAndSelector('legendText');
-        export const legendIndicatorPanel: ClassAndSelector = createClassAndSelector('legendIndicatorPanel');
-        export const legendIndicatorTitlePanel: ClassAndSelector = createClassAndSelector('legendIndicatorTitlePanel');
-        export const legendIndicatorTitleSvg: ClassAndSelector = createClassAndSelector('legendIndicatorTitleSvg');
-        export const kpiIndicatorPanel: ClassAndSelector = createClassAndSelector('kpiIndicatorPanel');
-        export const kpiIndicatorSvg: ClassAndSelector = createClassAndSelector('kpiIndicatorSvg');
-        export const milestoneIndicatorPanel: ClassAndSelector = createClassAndSelector('milestoneIndicatorPanel');
-        export const milestoneIndicatorSvg: ClassAndSelector = createClassAndSelector('milestoneIndicatorSvg');
-        export const phaseIndicatorPanel: ClassAndSelector = createClassAndSelector('phaseIndicatorPanel');
-        export const phaseIndicatorSvg: ClassAndSelector = createClassAndSelector('phaseIndicatorSvg');
+        export const axisGroup: ClassAndSelector = createClassAndSelector('gantt_axis');
+        export const domain: ClassAndSelector = createClassAndSelector('gantt_domain');
+        export const axisTick: ClassAndSelector = createClassAndSelector('gantt_tick');
+        export const tasks: ClassAndSelector = createClassAndSelector('gantt_tasks');
+        export const taskGroup: ClassAndSelector = createClassAndSelector('gantt_task-group');
+        export const singleTask: ClassAndSelector = createClassAndSelector('gantt_task');
+        export const singlePhase: ClassAndSelector = createClassAndSelector('gantt_phase');
+        export const taskRect: ClassAndSelector = createClassAndSelector('gantt_task-rect');
+        export const taskResource: ClassAndSelector = createClassAndSelector('gantt_task-resource');
+        export const errorPanel: ClassAndSelector = createClassAndSelector('gantt_errorPanel');
+        export const taskLines: ClassAndSelector = createClassAndSelector('gantt_task-lines');
+        export const kpiLines: ClassAndSelector = createClassAndSelector('gantt_kpi-lines');
+        export const label: ClassAndSelector = createClassAndSelector('gantt_label');
+        export const legendItems: ClassAndSelector = createClassAndSelector('gantt_legendItem');
+        export const legendTitle: ClassAndSelector = createClassAndSelector('gantt_legendTitle');
+        export const toggleTask: ClassAndSelector = createClassAndSelector('gantt_toggle-task');
+        export const toggleTaskGroup: ClassAndSelector = createClassAndSelector('gantt_toggle-task-group');
+        export const barPanel: ClassAndSelector = createClassAndSelector('gantt_barPanel');
+        export const taskPanel: ClassAndSelector = createClassAndSelector('gantt_taskPanel');
+        export const kpiPanel: ClassAndSelector = createClassAndSelector('gantt_kpiPanel');
+        export const timeLinePanel: ClassAndSelector = createClassAndSelector('gantt_timelinePanel');
+        export const bottomPannel: ClassAndSelector = createClassAndSelector('gantt_bottomPanel');
+        export const imagePanel: ClassAndSelector = createClassAndSelector('gantt_imagePanel');
+        export const kpiImagePanel: ClassAndSelector = createClassAndSelector('gantt_kpiImagePanel');
+        export const drillAllPanel: ClassAndSelector = createClassAndSelector('gantt_drillAllPanel');
+        export const drillAllPanel2: ClassAndSelector = createClassAndSelector('gantt_drillAllPanel2');
+        export const drillAllSvg: ClassAndSelector = createClassAndSelector('gantt_drillAllSvg');
+        export const drillAllSvg2: ClassAndSelector = createClassAndSelector('gantt_drillAllSvg2');
+        export const kpiTitlePanel: ClassAndSelector = createClassAndSelector('gantt_kpiTitlePanel');
+        export const bottomMilestonePanel: ClassAndSelector = createClassAndSelector('gantt_bottomMilestonePanel');
+        export const kpiSvg: ClassAndSelector = createClassAndSelector('gantt_kpiSvg');
+        export const backgroundBoxSvg: ClassAndSelector = createClassAndSelector('gantt_backgroundBox');
+        export const taskSvg: ClassAndSelector = createClassAndSelector('gantt_taskSvg');
+        export const barSvg: ClassAndSelector = createClassAndSelector('gantt_barSvg');
+        export const timeLineSvg: ClassAndSelector = createClassAndSelector('gantt_timelineSvg');
+        export const imageSvg: ClassAndSelector = createClassAndSelector('gantt_imageSvg');
+        export const bottomMilestoneSvg: ClassAndSelector = createClassAndSelector('gantt_bottomMilestoneSvg');
+        export const bottomMilestoneGroup: ClassAndSelector = createClassAndSelector('gantt_bottom-milestone-group');
+        export const bottomTaskDiv: ClassAndSelector = createClassAndSelector('gantt_bottomTaskDiv');
+        export const bottomTaskSvg: ClassAndSelector = createClassAndSelector('gantt_bottomTaskSvg');
+        export const gridGroup: ClassAndSelector = createClassAndSelector('gantt_grids');
+        export const todayIndicator: ClassAndSelector = createClassAndSelector('gantt_today-indicator');
+        export const todayText: ClassAndSelector = createClassAndSelector('gantt_today-text');
+        export const todayGroup: ClassAndSelector = createClassAndSelector('gantt_today-group');
+        export const legendPanel: ClassAndSelector = createClassAndSelector('gantt_legendPanel');
+        export const legendSvg: ClassAndSelector = createClassAndSelector('gantt_legendSvg');
+        export const legendGroup: ClassAndSelector = createClassAndSelector('gantt_legendGroup');
+        export const legendText: ClassAndSelector = createClassAndSelector('gantt_legendText');
+        export const legendIndicatorPanel: ClassAndSelector = createClassAndSelector('gantt_legendIndicatorPanel');
+        export const legendIndicatorTitlePanel: ClassAndSelector = createClassAndSelector('gantt_legendIndicatorTitlePanel');
+        export const legendIndicatorTitleSvg: ClassAndSelector = createClassAndSelector('gantt_legendIndicatorTitleSvg');
+        export const kpiIndicatorPanel: ClassAndSelector = createClassAndSelector('gantt_kpiIndicatorPanel');
+        export const kpiIndicatorSvg: ClassAndSelector = createClassAndSelector('gantt_kpiIndicatorSvg');
+        export const milestoneIndicatorPanel: ClassAndSelector = createClassAndSelector('gantt_milestoneIndicatorPanel');
+        export const milestoneIndicatorSvg: ClassAndSelector = createClassAndSelector('gantt_milestoneIndicatorSvg');
+        export const phaseIndicatorPanel: ClassAndSelector = createClassAndSelector('gantt_phaseIndicatorPanel');
+        export const phaseIndicatorSvg: ClassAndSelector = createClassAndSelector('gantt_phaseIndicatorSvg');
     }
 
     module GanttRoles {
@@ -462,78 +462,78 @@ module powerbi.extensibility.visual {
         private static prevSelectionCount: number = 0;
         private static isDateData: boolean = false;
         private static expandImage: string =
-        'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsSAAALEgHS'
-        + '3X78AAAA10lEQVQoz5WRwVHDUAxE3zfcyY0jdICpIM6NW9wBLiEd7GwH7gBTAaED04HpIOnAVPC5yJmPhwPoJD3NalZ'
-        + 'Syjnzn7i2vQGOUc9AB2yAYWGS2kVQSZqjuQX2QC/pFEO2wN72cBEASBqA12DPtg+S+hXrAFK5g+0JeIhyB0zAWLDHarV'
-        + 'TU+THsNsWbFwLDkU+/ML6iyXbLfAWjQ9JTfh+CfYuqU05Z2zX4fUGOAM1cF+wT6CRNF+llJY/3AFfwFP8YwRug7Vxaqr'
-        + 'C5y6mTMG6YHXBfp71L/EN44hU/TumF5gAAAAASUVORK5CYII=';
+            'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsSAAALEgHS'
+            + '3X78AAAA10lEQVQoz5WRwVHDUAxE3zfcyY0jdICpIM6NW9wBLiEd7GwH7gBTAaED04HpIOnAVPC5yJmPhwPoJD3NalZ'
+            + 'Syjnzn7i2vQGOUc9AB2yAYWGS2kVQSZqjuQX2QC/pFEO2wN72cBEASBqA12DPtg+S+hXrAFK5g+0JeIhyB0zAWLDHarV'
+            + 'TU+THsNsWbFwLDkU+/ML6iyXbLfAWjQ9JTfh+CfYuqU05Z2zX4fUGOAM1cF+wT6CRNF+llJY/3AFfwFP8YwRug7Vxaqr'
+            + 'C5y6mTMG6YHXBfp71L/EN44hU/TumF5gAAAAASUVORK5CYII=';
         private static collapseImage: string =
-        'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBI'
-        + 'WXMAAAsSAAALEgHS3X78AAAA3ElEQVQoz5WSwVHDQAxF3xru5MYROkjowLlxdAcxHZgKfn4H7g'
-        + 'BTAaGD0IHTQejAVLBctDM7vkW3/yTtH0mbcs7cEve1sD0AXchR0sn2EWgLS8XBdgd8ReJHUmu7'
-        + ' Bz6CfUvqUs4Z2zvgDDwAv8AOeK7YBWglLXcppQ1wAp6AP+AVWKL4MVgn6QrQACOwDdujpBmY4g'
-        + ' GAIRh1Q4ne9mbFhnoxTXS/hd7Gds7Ae2G2p9oBSRPwGexge5A0rlgPkOrD2Z6refbAHMMX9tKs'
-        + ' DtlG4R64SlrikIUt6dav8Q99qlfX01xJpAAAAABJRU5ErkJggg==';
+            'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBI'
+            + 'WXMAAAsSAAALEgHS3X78AAAA3ElEQVQoz5WSwVHDQAxF3xru5MYROkjowLlxdAcxHZgKfn4H7g'
+            + 'BTAaGD0IHTQejAVLBctDM7vkW3/yTtH0mbcs7cEve1sD0AXchR0sn2EWgLS8XBdgd8ReJHUmu7'
+            + ' Bz6CfUvqUs4Z2zvgDDwAv8AOeK7YBWglLXcppQ1wAp6AP+AVWKL4MVgn6QrQACOwDdujpBmY4g'
+            + ' GAIRh1Q4ne9mbFhnoxTXS/hd7Gds7Ae2G2p9oBSRPwGexge5A0rlgPkOrD2Z6refbAHMMX9tKs'
+            + ' DtlG4R64SlrikIUt6dav8Q99qlfX01xJpAAAAABJRU5ErkJggg==';
         private static drillDownImage: string =
-        'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAGCAYAAAD37n+BAAAAGXRFW'
-        + 'HRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAA'
-        + 'AAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8'
-        + '+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUC'
-        + 'BDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gP'
-        + 'HJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50'
-        + 'YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8'
-        + 'vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS'
-        + '94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zV'
-        + 'HlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIw'
-        + 'MTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjc3MkFFQkJBM0JFODExRTc'
-        + '5NTJDOUZDRTZDOTFFRjQ4IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjc3MkFFQkJCM0JFOD'
-        + 'ExRTc5NTJDOUZDRTZDOTFFRjQ4Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlS'
-        + 'UQ9InhtcC5paWQ6NzcyQUVCQjgzQkU4MTFFNzk1MkM5RkNFNkM5MUVGNDgiIHN0UmVmOmRvY3Vt'
-        + 'ZW50SUQ9InhtcC5kaWQ6NzcyQUVCQjkzQkU4MTFFNzk1MkM5RkNFNkM5MUVGNDgiLz4gPC9yZGY'
-        + '6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz'
-        + '4K7pvnAAAAVklEQVR42mJMS0ubzsDAkMFAHJjBBCSyQAxiFIPUMp89e5bB2Nh4G5AjDsQm+BTPm'
-        + 'jXrPzOIR0ATXDGIwwwTxaEJRTEIMKLbDQwEkNg0KBdFMQgABBgAaoAhSxcNKH0AAAAASUVORK5CYII=';
+            'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAGCAYAAAD37n+BAAAAGXRFW'
+            + 'HRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAA'
+            + 'AAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8'
+            + '+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUC'
+            + 'BDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gP'
+            + 'HJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50'
+            + 'YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8'
+            + 'vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS'
+            + '94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zV'
+            + 'HlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIw'
+            + 'MTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjc3MkFFQkJBM0JFODExRTc'
+            + '5NTJDOUZDRTZDOTFFRjQ4IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjc3MkFFQkJCM0JFOD'
+            + 'ExRTc5NTJDOUZDRTZDOTFFRjQ4Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlS'
+            + 'UQ9InhtcC5paWQ6NzcyQUVCQjgzQkU4MTFFNzk1MkM5RkNFNkM5MUVGNDgiIHN0UmVmOmRvY3Vt'
+            + 'ZW50SUQ9InhtcC5kaWQ6NzcyQUVCQjkzQkU4MTFFNzk1MkM5RkNFNkM5MUVGNDgiLz4gPC9yZGY'
+            + '6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz'
+            + '4K7pvnAAAAVklEQVR42mJMS0ubzsDAkMFAHJjBBCSyQAxiFIPUMp89e5bB2Nh4G5AjDsQm+BTPm'
+            + 'jXrPzOIR0ATXDGIwwwTxaEJRTEIMKLbDQwEkNg0KBdFMQgABBgAaoAhSxcNKH0AAAAASUVORK5CYII=';
         private static drillUpImage: string =
-        'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAGCAYAAAD37n+BAAAAGXRFWH'
-        + 'RTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAA'
-        + 'AAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+ID'
-        + 'x4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3'
-        + 'JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZj'
-        + 'pSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbn'
-        + 'MjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYW'
-        + 'RvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS'
-        + '4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZX'
-        + 'NvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbm'
-        + 'Rvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjREMjk2MDhDM0JFODExRTc4QTVFODdENT'
-        + 'ZDMzAyQjJEIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjREMjk2MDhEM0JFODExRTc4QTVFOD'
-        + 'dENTZDMzAyQjJEIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paW'
-        + 'Q6NEQyOTYwOEEzQkU4MTFFNzhBNUU4N0Q1NkMzMDJCMkQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC'
-        + '5kaWQ6NEQyOTYwOEIzQkU4MTFFNzhBNUU4N0Q1NkMzMDJCMkQiLz4gPC9yZGY6RGVzY3JpcHRpb2'
-        + '4+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5N9DX0AAAATElEQV'
-        + 'R42mJkwALS0tI6gBQ/EGfNmjXrP7IcMw7F5UBsAsTixsbG286ePYtdA5JiGMDQxIxHMVZNjAQUI4'
-        + 'MZID+xEKkYBDJABECAAQB/1x1ybiu+cQAAAABJRU5ErkJggg==';
+            'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAGCAYAAAD37n+BAAAAGXRFWH'
+            + 'RTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAA'
+            + 'AAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+ID'
+            + 'x4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3'
+            + 'JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZj'
+            + 'pSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbn'
+            + 'MjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYW'
+            + 'RvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS'
+            + '4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZX'
+            + 'NvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbm'
+            + 'Rvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjREMjk2MDhDM0JFODExRTc4QTVFODdENT'
+            + 'ZDMzAyQjJEIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjREMjk2MDhEM0JFODExRTc4QTVFOD'
+            + 'dENTZDMzAyQjJEIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paW'
+            + 'Q6NEQyOTYwOEEzQkU4MTFFNzhBNUU4N0Q1NkMzMDJCMkQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC'
+            + '5kaWQ6NEQyOTYwOEIzQkU4MTFFNzhBNUU4N0Q1NkMzMDJCMkQiLz4gPC9yZGY6RGVzY3JpcHRpb2'
+            + '4+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5N9DX0AAAATElEQV'
+            + 'R42mJkwALS0tI6gBQ/EGfNmjXrP7IcMw7F5UBsAsTixsbG286ePYtdA5JiGMDQxIxHMVZNjAQUI4'
+            + 'MZID+xEKkYBDJABECAAQB/1x1ybiu+cQAAAABJRU5ErkJggg==';
         private static drillDownAllImage: string =
-        'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMA'
-        + 'AAsSAAALEgHS3X78AAAA00lEQVQoz22PUY0CQRBE3xH+QQIOwAFIwAGcAvYUVLcC1sHuOeAcIGElIG'
-        + 'EdNB/XkwwDnUwynaqamkdEYGadmZ0jgk/HzM5mZhHBgv9ZA4O79zTj7iMwlH3Z6Bd33wHH3O/AtjaU'
-        + 'hh74y/semIBHZf5ND18RUdcboKb1R1L/8qU0PiSZu0/AmPpR0t3dO2AtyRbVS4O7j5JuwC7PlNDXlq'
-        + 'HMKRvmCvpUG5YV9CbFbQIDrAq0JPsE3dX1Od+SCtNrIEMH4JbrQdJU62+BDG2AWdLcak/tkG3X3uJZ'
-        + 'XAAAAABJRU5ErkJggg==';
+            'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMA'
+            + 'AAsSAAALEgHS3X78AAAA00lEQVQoz22PUY0CQRBE3xH+QQIOwAFIwAGcAvYUVLcC1sHuOeAcIGElIG'
+            + 'EdNB/XkwwDnUwynaqamkdEYGadmZ0jgk/HzM5mZhHBgv9ZA4O79zTj7iMwlH3Z6Bd33wHH3O/AtjaU'
+            + 'hh74y/semIBHZf5ND18RUdcboKb1R1L/8qU0PiSZu0/AmPpR0t3dO2AtyRbVS4O7j5JuwC7PlNDXlq'
+            + 'HMKRvmCvpUG5YV9CbFbQIDrAq0JPsE3dX1Od+SCtNrIEMH4JbrQdJU62+BDG2AWdLcak/tkG3X3uJZ'
+            + 'XAAAAABJRU5ErkJggg==';
         private static drillUpAllImage: string =
-        'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAA'
-        + 'AsSAAALEgHS3X78AAAA10lEQVQoz32Q0W3CUAxFD4j/dIRs0LJBOkGzQcMGdIIbb8AGfRuUTlA6QekG'
-        + 'ZQMygfnAAet91JIlyzr21b0LdyeXmT0AOwBJA1Ut8oGZPQEFeIzVL9BJOs/MMsE9cEgwMf/Fo/tBwB9'
-        + 'AE/sN8BZzA/wEc1OYP5yAtaQiaQc8A1NmVkn+G+hDcQ+cgW2A+9pDkdQBLXAEXoDX8ATQRRj3lMxsiD'
-        + 'ibKskJ6CUdsukBeA94CtObZPqrNt1WuRdJBVjXppdJ+jPg47yIuY1H13J3xnFs3Z3/emYuR+Rr0nbFP'
-        + 'j4AAAAASUVORK5CYII=';
+            'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAA'
+            + 'AsSAAALEgHS3X78AAAA10lEQVQoz32Q0W3CUAxFD4j/dIRs0LJBOkGzQcMGdIIbb8AGfRuUTlA6QekG'
+            + 'ZQMygfnAAet91JIlyzr21b0LdyeXmT0AOwBJA1Ut8oGZPQEFeIzVL9BJOs/MMsE9cEgwMf/Fo/tBwB9'
+            + 'AE/sN8BZzA/wEc1OYP5yAtaQiaQc8A1NmVkn+G+hDcQ+cgW2A+9pDkdQBLXAEXoDX8ATQRRj3lMxsiD'
+            + 'ibKskJ6CUdsukBeA94CtObZPqrNt1WuRdJBVjXppdJ+jPg47yIuY1H13J3xnFs3Z3/emYuR+Rr0nbFP'
+            + 'j4AAAAASUVORK5CYII=';
         private static legendIcon: string =
-        'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciI'
-        + 'HZpZXdCb3g9IjAgMCA1NC41IDQ2Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6Z3JheTt9PC9zdHls'
-        + 'ZT48L2RlZnM+PHRpdGxlPkFzc2V0IDI8L3RpdGxlPjxnIGlkPSJMYXllcl8yIiBkYXRhLW5hbWU9Ikx'
-        + 'heWVyIDIiPjxnIGlkPSJMYXllcl8xLTIiIGRhdGEtbmFtZT0iTGF5ZXIgMSI+PHJlY3QgY2xhc3M9Im'
-        + 'Nscy0xIiB3aWR0aD0iNTQuNSIgaGVpZ2h0PSI4LjMiLz48cmVjdCBjbGFzcz0iY2xzLTEiIHk9IjE4L'
-        + 'jg1IiB3aWR0aD0iNTQuNSIgaGVpZ2h0PSI4LjMiLz48cmVjdCBjbGFzcz0iY2xzLTEiIHk9IjM3Ljci'
-        + 'IHdpZHRoPSI1NC41IiBoZWlnaHQ9IjguMyIvPjwvZz48L2c+PC9zdmc+';
+            'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciI'
+            + 'HZpZXdCb3g9IjAgMCA1NC41IDQ2Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6Z3JheTt9PC9zdHls'
+            + 'ZT48L2RlZnM+PHRpdGxlPkFzc2V0IDI8L3RpdGxlPjxnIGlkPSJMYXllcl8yIiBkYXRhLW5hbWU9Ikx'
+            + 'heWVyIDIiPjxnIGlkPSJMYXllcl8xLTIiIGRhdGEtbmFtZT0iTGF5ZXIgMSI+PHJlY3QgY2xhc3M9Im'
+            + 'Nscy0xIiB3aWR0aD0iNTQuNSIgaGVpZ2h0PSI4LjMiLz48cmVjdCBjbGFzcz0iY2xzLTEiIHk9IjE4L'
+            + 'jg1IiB3aWR0aD0iNTQuNSIgaGVpZ2h0PSI4LjMiLz48cmVjdCBjbGFzcz0iY2xzLTEiIHk9IjM3Ljci'
+            + 'IHdpZHRoPSI1NC41IiBoZWlnaHQ9IjguMyIvPjwvZz48L2c+PC9zdmc+';
         private static iHeaderSingleCharWidth: number = 4;
         private static iKPIHeaderSingleCharWidth: number = 4;
         private static categoriesTitle: string[] = [];
@@ -548,47 +548,52 @@ module powerbi.extensibility.visual {
         private static sortLevel: number = 0;
         private static sortOrder: string = 'asc';
         private static sortDescOrder: string =
-        'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAGCAYAAAD37n+BAAAAGXRFWHRTb'
-        + '2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/'
-        + 'eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1'
-        + 'ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMT'
-        + 'M4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6c'
-        + 'mRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNj'
-        + 'cmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjA'
-        + 'vIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZW'
-        + 'Y9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhd'
-        + 'G9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlE'
-        + 'PSJ4bXAuaWlkOjc3MkFFQkJBM0JFODExRTc5NTJDOUZDRTZDOTFFRjQ4IiB4bXBNTTpEb2N1bWVudEl'
-        + 'EPSJ4bXAuZGlkOjc3MkFFQkJCM0JFODExRTc5NTJDOUZDRTZDOTFFRjQ4Ij4gPHhtcE1NOkRlcml2ZW'
-        + 'RGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NzcyQUVCQjgzQkU4MTFFNzk1MkM5RkNFNkM5M'
-        + 'UVGNDgiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NzcyQUVCQjkzQkU4MTFFNzk1MkM5RkNFNkM5'
-        + 'MUVGNDgiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2t'
-        + 'ldCBlbmQ9InIiPz4K7pvnAAAAVklEQVR42mJMS0ubzsDAkMFAHJjBBCSyQAxiFIPUMp89e5bB2Nh4G5'
-        + 'AjDsQm+BTPmjXrPzOIR0ATXDGIwwwTxaEJRTEIMKLbDQwEkNg0KBdFMQgABBgAaoAhSxcNKH0AAAAAS'
-        + 'UVORK5CYII=';
+            'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAGCAYAAAD37n+BAAAAGXRFWHRTb'
+            + '2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/'
+            + 'eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1'
+            + 'ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMT'
+            + 'M4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6c'
+            + 'mRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNj'
+            + 'cmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjA'
+            + 'vIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZW'
+            + 'Y9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhd'
+            + 'G9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlE'
+            + 'PSJ4bXAuaWlkOjc3MkFFQkJBM0JFODExRTc5NTJDOUZDRTZDOTFFRjQ4IiB4bXBNTTpEb2N1bWVudEl'
+            + 'EPSJ4bXAuZGlkOjc3MkFFQkJCM0JFODExRTc5NTJDOUZDRTZDOTFFRjQ4Ij4gPHhtcE1NOkRlcml2ZW'
+            + 'RGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NzcyQUVCQjgzQkU4MTFFNzk1MkM5RkNFNkM5M'
+            + 'UVGNDgiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NzcyQUVCQjkzQkU4MTFFNzk1MkM5RkNFNkM5'
+            + 'MUVGNDgiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2t'
+            + 'ldCBlbmQ9InIiPz4K7pvnAAAAVklEQVR42mJMS0ubzsDAkMFAHJjBBCSyQAxiFIPUMp89e5bB2Nh4G5'
+            + 'AjDsQm+BTPmjXrPzOIR0ATXDGIwwwTxaEJRTEIMKLbDQwEkNg0KBdFMQgABBgAaoAhSxcNKH0AAAAAS'
+            + 'UVORK5CYII=';
         private static sortAscOrder: string =
-        'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAGCAYAAAD37n+BAAAAGXRFWHRTb2'
-        + 'Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eH'
-        + 'BhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldG'
-        + 'EgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4ID'
-        + 'c5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPS'
-        + 'JodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdG'
-        + 'lvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bW'
-        + 'xuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dH'
-        + 'A6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD'
-        + '0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaW'
-        + 'lkOjREMjk2MDhDM0JFODExRTc4QTVFODdENTZDMzAyQjJEIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZG'
-        + 'lkOjREMjk2MDhEM0JFODExRTc4QTVFODdENTZDMzAyQjJEIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0Um'
-        + 'VmOmluc3RhbmNlSUQ9InhtcC5paWQ6NEQyOTYwOEEzQkU4MTFFNzhBNUU4N0Q1NkMzMDJCMkQiIHN0Um'
-        + 'VmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NEQyOTYwOEIzQkU4MTFFNzhBNUU4N0Q1NkMzMDJCMkQiLz4gPC'
-        + '9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz'
-        + '5N9DX0AAAATElEQVR42mJkwALS0tI6gBQ/EGfNmjXrP7IcMw7F5UBsAsTixsbG286ePYtdA5JiGMDQxI'
-        + 'xHMVZNjAQUI4MZID+xEKkYBDJABECAAQB/1x1ybiu+cQAAAABJRU5ErkJggg==';
+            'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAGCAYAAAD37n+BAAAAGXRFWHRTb2'
+            + 'Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eH'
+            + 'BhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldG'
+            + 'EgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4ID'
+            + 'c5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPS'
+            + 'JodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdG'
+            + 'lvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bW'
+            + 'xuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dH'
+            + 'A6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD'
+            + '0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaW'
+            + 'lkOjREMjk2MDhDM0JFODExRTc4QTVFODdENTZDMzAyQjJEIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZG'
+            + 'lkOjREMjk2MDhEM0JFODExRTc4QTVFODdENTZDMzAyQjJEIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0Um'
+            + 'VmOmluc3RhbmNlSUQ9InhtcC5paWQ6NEQyOTYwOEEzQkU4MTFFNzhBNUU4N0Q1NkMzMDJCMkQiIHN0Um'
+            + 'VmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NEQyOTYwOEIzQkU4MTFFNzhBNUU4N0Q1NkMzMDJCMkQiLz4gPC'
+            + '9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz'
+            + '5N9DX0AAAATElEQVR42mJkwALS0tI6gBQ/EGfNmjXrP7IcMw7F5UBsAsTixsbG286ePYtdA5JiGMDQxI'
+            + 'xHMVZNjAQUI4MZID+xEKkYBDJABECAAQB/1x1ybiu+cQAAAABJRU5ErkJggg==';
         private static sortDefaultIcon: string = Gantt.sortAscOrder;
         private static prevSortedColumn: number = -1;
         private static legendWidth: number = 90;
         private static maximumNormalizedFontSize: number = 19;
         private static maximumFontSize: number = 40;
+        private static isSelected: boolean = false;
+        private static regionValueFormatter: IValueFormatter;
+        private static metroValueFormatter: IValueFormatter;
+        private static projectValueFormatter: IValueFormatter;
+        private static trancheValueFormatter: IValueFormatter;
         private static get DefaultMargin(): IMargin {
             return {
                 top: 50,
@@ -666,7 +671,6 @@ module powerbi.extensibility.visual {
         private tooltipServiceWrapper: ITooltipServiceWrapper;
         private host: IVisualHost;
         private isInteractiveChart: boolean = false;
-        private selectionManger: ISelectionManager;
         private offset: number;
 
         constructor(options: VisualConstructorOptions) {
@@ -677,7 +681,6 @@ module powerbi.extensibility.visual {
             this.host = options.host;
             this.colors = options.host.colorPalette;
             this.selectionManager = options.host.createSelectionManager();
-            this.selectionManger = options.host.createSelectionManager();
             this.body = d3.select(options.element);
             this.tooltipServiceWrapper = createTooltipServiceWrapper(
                 this.host.tooltipService,
@@ -686,11 +689,9 @@ module powerbi.extensibility.visual {
             this.interactivityService = createInteractivityService(this.host);
             this.createViewport($(options.element));
             this.clearViewport();
-            this.ganttDiv.classed('hidden', true);
-            this.errorDiv.classed('hidden', false);
-            let errorStatement: string;
-            errorStatement = '';
-            this.errorText.text(errorStatement);
+            this.ganttDiv.classed('gantt_hidden', true);
+            this.errorDiv.classed('gantt_hidden', false);
+            this.errorText.text('');
         }
 
         /**
@@ -700,7 +701,7 @@ module powerbi.extensibility.visual {
             // create div container to the whole viewport area
             this.errorDiv = this.body.append('div')
                 .classed(Selectors.errorPanel.class, true)
-                .classed('hidden', true);
+                .classed('gantt_hidden', true);
             this.errorText = this.errorDiv.append('p');
 
             this.ganttDiv = this.body.append('div')
@@ -722,7 +723,7 @@ module powerbi.extensibility.visual {
 
             this.legendGroup.append('image')
                 .attr({
-                    class: 'legendToggle',
+                    class: 'gantt_legendToggle',
                     'xlink:href': Gantt.legendIcon,
                     width: 13,
                     height: 13,
@@ -732,7 +733,7 @@ module powerbi.extensibility.visual {
             this.legendGroup
                 .append('text')
                 .attr({
-                    class: 'legendToggle legendText',
+                    class: 'gantt_legendToggle gantt_legendText',
                     x: 18,
                     y: 10,
                     stroke: '#212121',
@@ -743,7 +744,7 @@ module powerbi.extensibility.visual {
             this.legendGroup.append('image')
                 .attr({
                     id: 'LegendToggleImage',
-                    class: 'legendToggle notVisible',
+                    class: 'gantt_legendToggle notVisible',
                     'xlink:href': Gantt.drillDownImage,
                     width: 12,
                     height: 12,
@@ -755,7 +756,7 @@ module powerbi.extensibility.visual {
             this.arrowDiv = this.ganttDiv
                 .append('div')
                 .attr({
-                    class: 'arrow-up arrow'
+                    class: 'gantt_arrow-up arrow'
                 });
 
             this.legendIndicatorDiv = this.ganttDiv
@@ -858,7 +859,7 @@ module powerbi.extensibility.visual {
             this.clearCatcher = appendClearCatcher(this.imageSvg);
 
             this.imageSvg.append('image')
-                .attr('id', 'ToggleIcon')
+                .attr('id', 'gantt_ToggleIcon')
                 .attr('class', 'collapse')
                 .attr('xlink:href', Gantt.collapseImage)
                 .attr('width', 12)
@@ -874,7 +875,7 @@ module powerbi.extensibility.visual {
             this.clearCatcher = appendClearCatcher(this.kpiImageSvg);
 
             this.kpiImageSvg.append('image')
-                .attr('id', 'KPIToggle')
+                .attr('id', 'gantt_KPIToggle')
                 .attr('class', 'collapse')
                 .attr('xlink:href', Gantt.collapseImage)
                 .attr('width', 12)
@@ -1076,7 +1077,7 @@ module powerbi.extensibility.visual {
                 let bottomMilestoneScrollPosition: number = 0;
                 // tslint:disable-next-line:no-any
                 let bottomMilestonePanel: any;
-                bottomMilestonePanel = document.getElementsByClassName('bottomMilestonePanel');
+                bottomMilestonePanel = document.getElementsByClassName('gantt_bottomMilestonePanel');
                 Gantt.isScrolled = true;
                 if (bottomMilestonePanel) {
                     bottomMilestoneScrollPosition = bottomMilestonePanel[0].scrollLeft;
@@ -1096,7 +1097,7 @@ module powerbi.extensibility.visual {
                 let bottomTaskScrollPosition: number = 0;
                 // tslint:disable-next-line:no-any
                 let bottomTaskDiv: any;
-                bottomTaskDiv = document.getElementsByClassName('bottomTaskDiv');
+                bottomTaskDiv = document.getElementsByClassName('gantt_bottomTaskDiv');
                 Gantt.isScrolled = true;
                 if (bottomTaskDiv) {
                     bottomTaskScrollPosition = bottomTaskDiv[0].scrollLeft;
@@ -1156,7 +1157,6 @@ module powerbi.extensibility.visual {
             let displayName: string;
             // tslint:disable-next-line:no-any
             let oMap: any;
-
             prefixStartText = 'Actual';
             prefixEndText = 'Actual';
             prefixDurationText = 'Forecast';
@@ -1176,7 +1176,9 @@ module powerbi.extensibility.visual {
                 }
             }
             tooltipDataArray = [];
-            for (let iTooltipIndexCount: number = 0; iTooltipIndexCount < tooltipIndex.length; iTooltipIndexCount++) {
+            let tooltipIndexLength: number;
+            tooltipIndexLength = tooltipIndex.length;
+            for (let iTooltipIndexCount: number = 0; iTooltipIndexCount < tooltipIndexLength; iTooltipIndexCount++) {
                 let iCatLength: number;
                 iCatLength = categorical.categories.length;
                 for (let iCatCount: number = 0; iCatCount < iCatLength; iCatCount++) {
@@ -1184,10 +1186,19 @@ module powerbi.extensibility.visual {
                         if (categorical.categories[iCatCount].values[taskIndex]
                             && categorical.categories[iCatCount].values[taskIndex] !== null
                             && oMap[tooltipIndex[iTooltipIndexCount]] === 1) {
-                            tooltipDataArray.push({
-                                displayName: tooltipIndex[iTooltipIndexCount].toString(),
-                                value: categorical.categories[iCatCount].values[taskIndex].toString()
-                            });
+                            let iValueFormatter: IValueFormatter;
+                            if (categorical.categories[iCatCount].source.format) {
+                                iValueFormatter = ValueFormatter.create({ format: categorical.categories[iCatCount].source.format });
+                                tooltipDataArray.push({
+                                    displayName: tooltipIndex[iTooltipIndexCount].toString(),
+                                    value: iValueFormatter.format(categorical.categories[iCatCount].values[taskIndex])
+                                });
+                            } else {
+                                tooltipDataArray.push({
+                                    displayName: tooltipIndex[iTooltipIndexCount].toString(),
+                                    value: categorical.categories[iCatCount].values[taskIndex].toString()
+                                });
+                            }
                             oMap[tooltipIndex[iTooltipIndexCount]] = 0;
                         }
                     }
@@ -1199,10 +1210,20 @@ module powerbi.extensibility.visual {
                         if (categorical.values[iValCount].values[taskIndex] &&
                             categorical.values[iValCount].values[taskIndex] !== null &&
                             oMap[tooltipIndex[iTooltipIndexCount]] === 1) {
-                            tooltipDataArray.push({
-                                displayName: tooltipIndex[iTooltipIndexCount].toString(),
-                                value: <string>categorical.values[iValCount].values[taskIndex].toString()
-                            });
+                            let iValueFormatter: IValueFormatter;
+
+                            if (categorical.values[iValCount].source.format) {
+                                iValueFormatter = ValueFormatter.create({ format: categorical.values[iValCount].source.format });
+                                tooltipDataArray.push({
+                                    displayName: tooltipIndex[iTooltipIndexCount].toString(),
+                                    value: iValueFormatter.format(categorical.values[iValCount].values[taskIndex])
+                                });
+                            } else {
+                                tooltipDataArray.push({
+                                    displayName: tooltipIndex[iTooltipIndexCount].toString(),
+                                    value: <string>categorical.values[iValCount].values[taskIndex].toString()
+                                });
+                            }
                             oMap[tooltipIndex[iTooltipIndexCount]] = 0;
                         }
                     }
@@ -1242,6 +1263,25 @@ module powerbi.extensibility.visual {
                 column = null;
                 for (column of dataView.metadata.columns) {
                     if (Gantt.hasRole(column, GanttRoles.category)) {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        /**
+         * Check if task has data for data labels
+         * @param dataView
+         */
+        private static isChartHasDataLabels(dataView: DataView): boolean {
+            if (dataView.metadata &&
+                dataView.metadata.columns) {
+                let column: DataViewMetadataColumn;
+                column = null;
+                for (column of dataView.metadata.columns) {
+                    if (Gantt.hasRole(column, GanttRoles.resource)) {
                         return true;
                     }
                 }
@@ -1320,7 +1360,8 @@ module powerbi.extensibility.visual {
             let columns: GanttColumns<GanttCategoricalColumns>;
             columns = GanttColumns.getCategoricalColumns(dataView);
             const columnSource: DataViewMetadataColumn[] = dataView.metadata.columns;
-            let categoriesdata: DataViewCategoricalColumn[];
+            // tslint:disable-next-line:no-any
+            let categoriesdata: any;
             categoriesdata = dataView.categorical.categories;
             let valuesdata: DataViewValueColumn[];
             valuesdata = dataView.categorical.values;
@@ -1411,8 +1452,34 @@ module powerbi.extensibility.visual {
                 let duration: number = 0;
 
                 for (let kpiValueCounter: number = 0; kpiValueCounter < categoryRoles.length; kpiValueCounter++) {
-                    let value: string = <string>categoriesdata[categoryRoles[kpiValueCounter]].values[index];
-                    value = value ? value : '';
+                    let value: string = '';
+                    value = <string>categoriesdata[categoryRoles[kpiValueCounter]].values[index];
+                    if (value && value !== '0') {
+                        value = value ? value : '';
+                    } else if (parseInt(value, 10) === 0) {
+                        value = '0';
+                    } else {
+                        value = value ? value : '';
+                    }
+
+                    if (kpiValueCounter === 0) {
+                        Gantt.regionValueFormatter = ValueFormatter.create({
+                            format: categoriesdata[categoryRoles[kpiValueCounter]].source.format
+                        });
+                    } else if (kpiValueCounter === 1) {
+                        Gantt.metroValueFormatter = ValueFormatter.create({
+                            format: categoriesdata[categoryRoles[kpiValueCounter]].source.format
+                        });
+                    } else if (kpiValueCounter === 2) {
+                        Gantt.projectValueFormatter = ValueFormatter.create({
+                            format: categoriesdata[categoryRoles[kpiValueCounter]].source.format
+                        });
+                    } else {
+                        Gantt.trancheValueFormatter = ValueFormatter.create({
+                            format: categoriesdata[categoryRoles[kpiValueCounter]].source.format
+                        });
+                    }
+
                     taskValues.push(value);
                     value = (value === '' ? 'N/A' : value);
 
@@ -1427,7 +1494,9 @@ module powerbi.extensibility.visual {
                     }
                 }
 
-                for (let kpiValueCounter: number = 0; kpiValueCounter < kpiRoles.length; kpiValueCounter++) {
+                let kpiRolesLength: number;
+                kpiRolesLength = kpiRoles.length;
+                for (let kpiValueCounter: number = 0; kpiValueCounter < kpiRolesLength; kpiValueCounter++) {
                     let name: string;
                     name = <string>categoriesdata[kpiRoles[kpiValueCounter]].source.displayName;
                     let value: string;
@@ -1613,7 +1682,7 @@ module powerbi.extensibility.visual {
             columnNumber = 0;
             let categoriesLength: number;
             categoriesLength = tasks[0].name.length;
-            const resizerClassLiteral: string = '.resizer';
+            const resizerClassLiteral: string = '.gantt_resizer';
 
             $(resizerClassLiteral).mousedown(function (e: JQueryMouseEventObject): void {
                 Gantt.isResizeStarted = true;
@@ -1636,26 +1705,14 @@ module powerbi.extensibility.visual {
             let horizontalLinesX2: string[];
             horizontalLinesX2 = [];
             let kpiLeft: string;
-            kpiLeft = d3.select('.kpiPanel').style('left');
+            kpiLeft = d3.select('.gantt_kpiPanel').style('left');
             let barLeft: string;
-            barLeft = d3.select('.barPanel').style('left');
+            barLeft = d3.select('.gantt_barPanel').style('left');
             let scroller: number;
             for (let iIterator: number = parseInt(columnNumber + nullStringLiteral, 10); iIterator < tasks[0].name.length; iIterator++) {
                 columnX[iIterator] = d3.select(taskColumnClassLiteral + iIterator).attr('x');
                 if (iIterator !== 0) {
                     scrollerX[iIterator] = d3.select(headerCellClassLiteral + iIterator).attr('x');
-                    if (viewModel.settings.taskLabels.vertGrid) {
-                        verticalLinesX1[iIterator] = d3.select(verticalLineClassLiteral + iIterator).attr('x1');
-                    }
-                }
-                if (viewModel.settings.taskLabels.horizGrid && this.viewModel.settings.taskLabels.show) {
-                    if (d3.select(horizontalLineClassLiteral + iIterator)[0][0]) {
-                        horizontalLinesX1[iIterator] = d3.select(horizontalLineClassLiteral + iIterator).attr('x1');
-                        horizontalLinesX2[iIterator] = d3.select(horizontalLineClassLiteral + iIterator).attr('x2');
-                    } else {
-                        horizontalLinesX1[iIterator] = '0';
-                        horizontalLinesX2[iIterator] = '0';
-                    }
                 }
             }
             let highestLabelLength: number = 0;
@@ -1736,17 +1793,6 @@ module powerbi.extensibility.visual {
                                 sum = parseFloat(columnX[iIterator]) + parseFloat(xDiff.toString());
                                 d3.selectAll(taskColumnClassLiteral + iIterator).attr('x', sum);
                                 d3.selectAll(categoryIdLiteral + iIterator).attr('x', sum);
-                                if (viewModel.settings.taskLabels.vertGrid) {
-                                    sum = parseFloat(verticalLinesX1[iIterator]) + parseFloat(xDiff.toString());
-                                    d3.selectAll(verticalLineClassLiteral + iIterator).attr('x1', sum);
-                                    d3.selectAll(verticalLineClassLiteral + iIterator).attr('x2', sum);
-                                }
-                                if (viewModel.settings.taskLabels.horizGrid) {
-                                    sum = parseFloat(horizontalLinesX2[iIterator - 1]) + parseFloat(xDiff.toString());
-                                    d3.selectAll(horizontalLineClassLiteral + (iIterator - 1)).attr('x2', sum);
-                                    sum = parseFloat(horizontalLinesX1[iIterator]) + parseFloat(xDiff.toString());
-                                    d3.selectAll(horizontalLineClassLiteral + (iIterator)).attr('x1', sum);
-                                }
                             }
                         }
                     }
@@ -1795,89 +1841,109 @@ module powerbi.extensibility.visual {
             properties = {};
             Gantt.categoryColumnsWidth = '';
             let iColumnWidth: number = 0;
+            let objects: DataViewObjects;
+            objects = this.viewModel.dataView.metadata.objects;
+            let categoryLengthPrev: number;
+            const hyphenX1Colon: string = '-x1:';
+            const hyphenX2Colon: string = '-x2:';
+            const hyphenX1Colon0SemiColon: string = '-x1:0;';
+            const hyphenX2Colon0SemiColon: string = '-x2:0;';
+            const hyphenX2Colon100SemiColon: string = '-x2:100;';
+            let lastRectX: number;
+            let barPanelLeft: number;
+            let kpiPanelWidth: number;
+            barPanelLeft = parseFloat(d3.select('.gantt_barPanel').style('left'));
+            kpiPanelWidth = parseFloat(d3.select('.gantt_kpiPanel').style('left'));
 
-            for (let iIterator: number = 0; iIterator < categoryLength; iIterator++) {
-                let lastRectX: number;
-                lastRectX = parseFloat($(headerCellClassLiteral + iIterator).attr('x'));
-                let barPanelLeft: number;
-                barPanelLeft = parseFloat(d3.select('.barPanel').style('left'));
-                let kpiPanelWidth: number;
-                kpiPanelWidth = parseFloat(d3.select('.kpiPanel').style('left'));
-                Gantt.categoryColumnsWidth += taskColumnLiteral + iIterator + colonLiteral
-                    + d3.select(taskColumnClassLiteral + iIterator).attr('x') + semiColonLiteral;
-                if (viewModel.settings.taskLabels.vertGrid && iIterator !== 0) {
-                    Gantt.categoryColumnsWidth += verticalLineLiteral + iIterator + colonLiteral
-                        + d3.select(verticalLineClassLiteral + iIterator).attr('x1') + semiColonLiteral;
-                }
-                if (this.viewModel.settings.taskLabels.horizGrid) {
-                    const hyphenX1Colon: string = '-x1:';
-                    const hyphenX2Colon: string = '-x2:';
-                    const hyphenX1Colon0SemiColon: string = '-x1:0;';
-                    const hyphenX2Colon0SemiColon: string = '-x2:0;';
-                    const hyphenX2Colon100SemiColon: string = '-x2:100;';
-                    if (d3.select(horizontalLineClassLiteral + iIterator)[0][0]) {
-                        Gantt.categoryColumnsWidth += horizontalLineLiteral + iIterator
-                            + hyphenX1Colon + d3.select(horizontalLineClassLiteral + iIterator).attr('x1') + semiColonLiteral;
-                    } else {
-                        Gantt.categoryColumnsWidth += horizontalLineLiteral + iIterator + hyphenX1Colon0SemiColon;
-                    }
-                    if (iIterator === categoryLength - 1) {
-                        if ((kpiPanelWidth > 0 && lastRectX > kpiPanelWidth) || lastRectX > barPanelLeft) {
-                            Gantt.categoryColumnsWidth += horizontalLineLiteral + iIterator + hyphenX2Colon100SemiColon;
+            categoryLengthPrev = getValue<number>(objects, 'categoryColumnsWidth', 'categoryLength', 0);
+            if (categoryLengthPrev && categoryLengthPrev !== 0 && categoryLengthPrev === categoryLength) {
+                for (let iIterator: number = 0; iIterator < categoryLength; iIterator++) {
+                    lastRectX = parseFloat($(headerCellClassLiteral + iIterator).attr('x'));
+                    Gantt.categoryColumnsWidth += taskColumnLiteral + iIterator + colonLiteral
+                        + d3.select(taskColumnClassLiteral + iIterator).attr('x') + semiColonLiteral;
+
+                    if (iIterator === 0) {
+                        if (categoryLength === 1) {
+                            Gantt.categoryColumnsWidth += columnLiteral + iIterator + colonLiteral
+                                + parseFloat($('.gantt_kpiPanel').css('left')) + semiColonLiteral;
                         } else {
-                            Gantt.categoryColumnsWidth += horizontalLineLiteral + iIterator + hyphenX2Colon
-                                + ((this.viewport.width * this.viewModel.settings.displayRatio.ratio / 100) + 20) + semiColonLiteral;
+                            Gantt.categoryColumnsWidth += columnLiteral + iIterator + colonLiteral
+                                + parseFloat($(headerCellClassLiteral + (iIterator + 1)).attr('x')) + semiColonLiteral;
+                        }
+                    } else if (iIterator === categoryLength - 1) {
+                        if ((kpiPanelWidth > 0 && lastRectX > kpiPanelWidth - 10) || lastRectX > barPanelLeft - 10) {
+                            Gantt.categoryColumnsWidth += columnLiteral + iIterator + colonLiteral + 100 + semiColonLiteral;
+                        } else {
+                            if (kpiPanelWidth > 0) {
+                                iColumnWidth = (parseFloat(d3.select('.gantt_kpiPanel').style('left'))
+                                    - parseFloat($(headerCellClassLiteral + (iIterator)).attr('x')));
+                            } else {
+                                iColumnWidth = (this.viewport.width * this.viewModel.settings.displayRatio.ratio / 100) + 20
+                                    - parseFloat($(headerCellClassLiteral + (iIterator)).attr('x'));
+                            }
+
+                            Gantt.categoryColumnsWidth += columnLiteral + iIterator + colonLiteral + iColumnWidth + semiColonLiteral;
                         }
                     } else {
-                        if (d3.select(horizontalLineClassLiteral + iIterator)[0][0]) {
-                            Gantt.categoryColumnsWidth += horizontalLineLiteral + iIterator
-                                + hyphenX2Colon + d3.select(horizontalLineClassLiteral + iIterator).attr('x2') + semiColonLiteral;
-                        } else {
-                            Gantt.categoryColumnsWidth += horizontalLineLiteral + iIterator + hyphenX2Colon0SemiColon;
-                        }
-
-                    }
-                }
-
-                if (iIterator === 0) {
-                    if (categoryLength === 1) {
-                        Gantt.categoryColumnsWidth += columnLiteral + iIterator + colonLiteral
-                            + parseFloat($('.kpiPanel').css('left')) + semiColonLiteral;
-                    } else {
-                        Gantt.categoryColumnsWidth += columnLiteral + iIterator + colonLiteral
-                            + parseFloat($(headerCellClassLiteral + (iIterator + 1)).attr('x')) + semiColonLiteral;
-                    }
-                } else if (iIterator === categoryLength - 1) {
-                    if ((kpiPanelWidth > 0 && lastRectX > kpiPanelWidth) || lastRectX > barPanelLeft) {
-                        Gantt.categoryColumnsWidth += columnLiteral + iIterator + colonLiteral + 100 + semiColonLiteral;
-                    } else {
-                        if (kpiPanelWidth > 0) {
-                            iColumnWidth = (parseFloat(d3.select('.kpiPanel').style('left'))
-                                - parseFloat($(headerCellClassLiteral + (iIterator)).attr('x')));
-                        } else {
-                            iColumnWidth = (this.viewport.width * this.viewModel.settings.displayRatio.ratio / 100) + 20
-                                - parseFloat($(headerCellClassLiteral + (iIterator)).attr('x'));
-                        }
-
+                        iColumnWidth = parseFloat($(headerCellClassLiteral + (iIterator + 1)).attr('x'))
+                            - parseFloat($(headerCellClassLiteral + (iIterator)).attr('x'));
                         Gantt.categoryColumnsWidth += columnLiteral + iIterator + colonLiteral + iColumnWidth + semiColonLiteral;
                     }
-                } else {
-                    iColumnWidth = parseFloat($(headerCellClassLiteral + (iIterator + 1)).attr('x'))
-                        - parseFloat($(headerCellClassLiteral + (iIterator)).attr('x'));
-                    Gantt.categoryColumnsWidth += columnLiteral + iIterator + colonLiteral + iColumnWidth + semiColonLiteral;
                 }
+                properties[ganttProperties.categoryColumnsWidth.categoryLength.propertyName] = categoryLength.toString();
             }
             properties[ganttProperties.categoryColumnsWidth.width.propertyName] = JSON.stringify(Gantt.categoryColumnsWidth);
 
-            let objects: DataViewObjects;
-            objects = this.viewModel.dataView.metadata.objects;
             let totalCategories: number;
             totalCategories = this.viewModel.tasksNew[0].name.length;
-            let isResizeStarted: string;
-            isResizeStarted = getValue<string>(objects, 'categoryColumnsWidth', 'isResizeStarted', 'text');
-            if (Gantt.isResizeStarted || isResizeStarted === 'true') {
-                properties[ganttProperties.categoryColumnsWidth.isResizeStarted.propertyName] = 'true';
+            let width: VisualObjectInstancesToPersist;
+            width = {
+                replace: [
+                    <VisualObjectInstance>{
+                        objectName: ganttProperties.categoryColumnsWidth.width.objectName,
+                        selector: null,
+                        properties: properties
+                    }]
+            };
+            this.host.persistProperties(width);
+        }
+
+        public resetResizeData(categoryLength: number, viewModel: GanttViewModel): void {
+            let properties: { [propertyName: string]: DataViewPropertyValue };
+            properties = {};
+            Gantt.categoryColumnsWidth = '';
+            const taskSvgWidth: number = parseInt(this.taskSvg.attr('width'), 10);
+            const singleColumnWidth: number = taskSvgWidth / categoryLength;
+            const literalFifteen: string = '15';
+            const literalFive: string = '5';
+            let lastRectX: number;
+            let barPanelLeft: number;
+            let kpiPanelWidth: number;
+            const hyphenX1Colon: string = '-x1:';
+            const hyphenX2Colon: string = '-x2:';
+            const hyphenX1Colon0SemiColon: string = '-x1:0;';
+            const hyphenX2Colon0SemiColon: string = '-x2:0;';
+            const hyphenX2Colon100SemiColon: string = '-x2:100;';
+            barPanelLeft = parseFloat(d3.select('.gantt_barPanel').style('left'));
+            kpiPanelWidth = parseFloat(d3.select('.gantt_kpiPanel').style('left'));
+            lastRectX = (categoryLength - 1) * singleColumnWidth;
+            for (let iIterator: number = 0; iIterator < categoryLength; iIterator++) {
+
+                if (iIterator === 0) {
+                    Gantt.categoryColumnsWidth += taskColumnLiteral + iIterator + colonLiteral
+                        + literalFifteen + semiColonLiteral;
+                } else {
+                    Gantt.categoryColumnsWidth += taskColumnLiteral + iIterator + colonLiteral
+                        + (iIterator * singleColumnWidth) + semiColonLiteral;
+                }
+                Gantt.categoryColumnsWidth += columnLiteral + iIterator + colonLiteral + singleColumnWidth + semiColonLiteral;
             }
+            properties[ganttProperties.categoryColumnsWidth.categoryLength.propertyName] = categoryLength;
+
+            properties[ganttProperties.categoryColumnsWidth.width.propertyName] = JSON.stringify(Gantt.categoryColumnsWidth);
+
+            let totalCategories: number;
+            totalCategories = this.viewModel.tasksNew[0].name.length;
             let width: VisualObjectInstancesToPersist;
             width = {
                 replace: [
@@ -1892,95 +1958,6 @@ module powerbi.extensibility.visual {
 
         private static updateCount: number = 0;
         private static isResizeStarted: boolean = false;
-        public setResizeData(): void {
-            let objects: DataViewObjects;
-            objects = this.viewModel.dataView.metadata.objects;
-            let totalCategories: number;
-            totalCategories = this.viewModel.tasksNew[0].name.length;
-            let getJSONString: string;
-            getJSONString = getValue<string>(objects, 'categoryColumnsWidth', 'width', 'text');
-            let isResizeStarted: string;
-            isResizeStarted = getValue<string>(objects, 'categoryColumnsWidth', 'isResizeStarted', 'text');
-            let taskColumnsX: number[];
-            taskColumnsX = [];
-
-            for (let iIterator: number = 0; iIterator < totalCategories; iIterator++) {
-                taskColumnsX[iIterator] = 0;
-            }
-            if (isResizeStarted === 'true') {
-                if (getJSONString && getJSONString.length !== 0 && getJSONString.indexOf('text') === -1) {
-                    // tslint:disable-next-line:no-any
-                    let parsedString: any;
-                    parsedString = JSON.parse(getJSONString);
-                    Gantt.categoryColumnsWidth = parsedString;
-                    let splittedString: string[];
-                    splittedString = parsedString.split(';');
-                    for (let iIterator: number = 0; iIterator < splittedString.length; iIterator++) {
-                        if (splittedString[iIterator].indexOf('horizontal-line') !== -1) {
-                            let splittedHorizStr: string[];
-                            splittedHorizStr = splittedString[iIterator].split(':');
-                            if (splittedHorizStr[1] && splittedHorizStr[1] !== null && splittedHorizStr[1] !== undefined) {
-                                let value: string;
-                                let columnNumberArr: string[];
-                                let attr: string;
-                                let columnNumber: string;
-                                value = splittedHorizStr[1];
-                                columnNumberArr = splittedHorizStr[0].split('-');
-                                attr = columnNumberArr[2];
-                                columnNumber = columnNumberArr[1].substr(4, columnNumberArr[1].length);
-                            }
-                        } else if (splittedString[iIterator].indexOf('vertical-line') !== -1) {
-                            let oSplittedVertLine: string[];
-                            oSplittedVertLine = splittedString[iIterator].split(':');
-                            let value: string;
-                            value = oSplittedVertLine[1];
-                            let columnNumber: string;
-                            columnNumber = oSplittedVertLine[0].substr(13, oSplittedVertLine[0].length - 13);
-                        } else if (splittedString[iIterator].indexOf('task-column') !== -1) {
-                            let oSplittedTaskCol: string[];
-                            oSplittedTaskCol = splittedString[iIterator].split(':');
-                            let value: string;
-                            value = oSplittedTaskCol[1];
-                            let columnNumber: string;
-                            columnNumber = oSplittedTaskCol[0].substr(11, oSplittedTaskCol[0].length - 11);
-                            d3.selectAll(categoryIdLiteral + columnNumber).attr('x', value);
-                            d3.selectAll(taskColumnClassLiteral + columnNumber).attr('x', value);
-                            d3.selectAll(headerCellClassLiteral + columnNumber).attr('x', parseFloat(value) - 10);
-
-                            if (this.viewModel.settings.taskLabels.vertGrid) {
-                                d3.selectAll(verticalLineClassLiteral + columnNumber).attr('x1', parseFloat(value) - 10);
-                                d3.selectAll(verticalLineClassLiteral + columnNumber).attr('x2', parseFloat(value) - 10);
-                            }
-                            taskColumnsX[parseInt(columnNumber, 10)] = parseFloat(value);
-                        }
-                    }
-                }
-                for (let iIterator: number = 0; iIterator < totalCategories; iIterator++) {
-                    if (iIterator === totalCategories - 1) {
-                        let lastRectX: number;
-                        lastRectX = parseFloat($(headerCellClassLiteral + iIterator).attr('x'));
-                        let barPanelLeft: number;
-                        barPanelLeft = parseFloat(d3.select('.barPanel').style('left'));
-                        let kpiPanelWidth: number;
-                        kpiPanelWidth = parseFloat(d3.select('.kpiPanel').style('left'));
-
-                        if ((kpiPanelWidth > 0 && lastRectX > kpiPanelWidth) || lastRectX > barPanelLeft) {
-                            d3.selectAll(horizontalLineClassLiteral + iIterator).attr('x1', taskColumnsX[iIterator] - 10);
-                            d3.selectAll(horizontalLineClassLiteral + iIterator).attr('x2', this.viewport.width);
-                        } else {
-                            d3.selectAll(horizontalLineClassLiteral + iIterator).attr('x1', taskColumnsX[iIterator] - 10);
-                            d3.selectAll(horizontalLineClassLiteral + iIterator).attr('x2', $('.taskPanel').width());
-                        }
-                    } else {
-                        if (iIterator === 0) {
-                            d3.selectAll(horizontalLineClassLiteral + iIterator).attr('x1', 10);
-                        }
-                        d3.selectAll(horizontalLineClassLiteral + iIterator).attr('x1', taskColumnsX[iIterator] - 10);
-                        d3.selectAll(horizontalLineClassLiteral + iIterator).attr('x2', taskColumnsX[iIterator + 1] - 10);
-                    }
-                }
-            }
-        }
 
         /**
          * Convert the dataView to view model
@@ -1998,7 +1975,8 @@ module powerbi.extensibility.visual {
             metadata = dataView.metadata;
             let kpiData: KPIConfig[];
             kpiData = [];
-            for (let iIterator: number = 0; iIterator < metadata.columns.length; iIterator++) {
+            const metadataColumnsLength: number = metadata.columns.length;
+            for (let iIterator: number = 0; iIterator < metadataColumnsLength; iIterator++) {
                 if (metadata.columns[iIterator].roles[GanttRoles.kpiValueBag]) {
                     let currentColumn: DataViewMetadataColumn;
                     currentColumn = metadata.columns[iIterator];
@@ -2080,8 +2058,8 @@ module powerbi.extensibility.visual {
             Gantt.viewModelNew = this.viewModel;
             if (!this.viewModel || !this.viewModel.tasksNew) {
                 this.clearViewport();
-                this.ganttDiv.classed('hidden', true);
-                this.errorDiv.classed('hidden', false);
+                this.ganttDiv.classed('gantt_hidden', true);
+                this.errorDiv.classed('gantt_hidden', false);
                 let errorStatement: string;
                 errorStatement = 'Please add data to the Category field to load the visual';
                 this.errorText.text(errorStatement);
@@ -2089,8 +2067,8 @@ module powerbi.extensibility.visual {
                 return;
             } else if (this.viewModel.tasksNew.length === 0) {
                 this.clearViewport();
-                this.ganttDiv.classed('hidden', true);
-                this.errorDiv.classed('hidden', false);
+                this.ganttDiv.classed('gantt_hidden', true);
+                this.errorDiv.classed('gantt_hidden', false);
                 let errorStatement: string;
                 errorStatement = 'There is no data to display';
                 this.errorText.text(errorStatement);
@@ -2098,8 +2076,8 @@ module powerbi.extensibility.visual {
                 return;
             } else if (!hasStart && !hasEnd) {
                 this.clearViewport();
-                this.ganttDiv.classed('hidden', true);
-                this.errorDiv.classed('hidden', false);
+                this.ganttDiv.classed('gantt_hidden', true);
+                this.errorDiv.classed('gantt_hidden', false);
                 let errorStatement: string;
                 errorStatement = 'Please add data to the Start and End field to load the visual';
                 this.errorText.text(errorStatement);
@@ -2107,8 +2085,8 @@ module powerbi.extensibility.visual {
                 return;
             } else if (!hasStart) {
                 this.clearViewport();
-                this.ganttDiv.classed('hidden', true);
-                this.errorDiv.classed('hidden', false);
+                this.ganttDiv.classed('gantt_hidden', true);
+                this.errorDiv.classed('gantt_hidden', false);
                 let errorStatement: string;
                 errorStatement = 'Please add data to the Start field to load the visual';
                 this.errorText.text(errorStatement);
@@ -2116,16 +2094,16 @@ module powerbi.extensibility.visual {
                 return;
             } else if (!hasEnd) {
                 this.clearViewport();
-                this.ganttDiv.classed('hidden', true);
-                this.errorDiv.classed('hidden', false);
+                this.ganttDiv.classed('gantt_hidden', true);
+                this.errorDiv.classed('gantt_hidden', false);
                 let errorStatement: string;
                 errorStatement = 'Please add data to the End field to load the visual';
                 this.errorText.text(errorStatement);
 
                 return;
             } else {
-                this.errorDiv.classed('hidden', true);
-                this.ganttDiv.classed('hidden', false);
+                this.errorDiv.classed('gantt_hidden', true);
+                this.ganttDiv.classed('gantt_hidden', false);
             }
 
             Gantt.isPhaseHighlighted = false;
@@ -2138,7 +2116,7 @@ module powerbi.extensibility.visual {
             flagSubregion = false;
             Gantt.milestoneNames = Gantt.milestoneNames.sort();
             Gantt.currentTasksNumber = Gantt.totalTasksNumber = this.viewModel.tasksNew.length;
-            $('#DrillAll').show();
+            $('#gantt_DrillAll').show();
             let width: number = 0;
             let widthFromPercent: number = 0;
             let normalizer: number;
@@ -2192,6 +2170,16 @@ module powerbi.extensibility.visual {
                 this.viewModel.settings.taskLabels.width = Gantt.maxTaskNameLength;
             }
 
+            if (isNaN(this.viewModel.settings.taskGridlines.interval) ||
+                this.viewModel.settings.taskGridlines.interval.toString().length === 0 ||
+                parseInt(this.viewModel.settings.taskGridlines.interval.toString(), 10) < 0) {
+                this.viewModel.settings.taskGridlines.interval = 0;
+            } else if (isNaN(this.viewModel.settings.taskGridlines.interval) ||
+                this.viewModel.settings.taskGridlines.interval.toString().length === 0 ||
+                parseInt(this.viewModel.settings.taskGridlines.interval.toString(), 10) > 100) {
+                this.viewModel.settings.taskGridlines.interval = 100;
+            }
+
             if (this.viewModel.tasksNew[0].name.length === 1) {
                 width = Gantt.singleCharacterWidth * this.viewModel.settings.taskLabels.width * this.viewModel.tasksNew[0].name.length + 15;
             } else if (this.viewModel.tasksNew[0].name.length === 2) {
@@ -2204,6 +2192,7 @@ module powerbi.extensibility.visual {
                 width = Gantt.singleCharacterWidth * this.viewModel.settings.taskLabels.width
                     * this.viewModel.tasksNew[0].name.length + 114;
             }
+
             Gantt.taskLabelWidthOriginal = width;
             this.viewport = _.clone(options.viewport);
             let viewportWidth: number;
@@ -2214,32 +2203,36 @@ module powerbi.extensibility.visual {
             Gantt.kpiLabelWidthOriginal = Gantt.kpiLabelWidth * this.viewModel.kpiData.length;
             Gantt.kpiLabelWidth = Gantt.kpiLabelWidthOriginal;
             Gantt.taskLabelWidthOriginal = (this.viewport.width - Gantt.kpiLabelWidthOriginal) * Gantt.currentDisplayRatio / 100;
+
             Gantt.minDisplayRatio = Math.ceil((100 * ((0.01 * this.viewport.width) + Gantt.kpiLabelWidthOriginal)) / this.viewport.width);
             if (Gantt.currentDisplayRatio < Gantt.minDisplayRatio && Gantt.minDisplayRatio <= 80) {
                 this.viewModel.settings.displayRatio.ratio = Gantt.minDisplayRatio;
-            } else if (Gantt.currentDisplayRatio > 80) {
+            } else if (Gantt.currentDisplayRatio > 80 || Gantt.minDisplayRatio > 80) {
                 this.viewModel.settings.displayRatio.ratio = 80;
             }
             Gantt.currentDisplayRatio = this.viewModel.settings.displayRatio.ratio;
             let defaultGanttRatio: number;
             defaultGanttRatio = Math.ceil((100 * (Gantt.taskLabelWidthOriginal + Gantt.kpiLabelWidthOriginal)) / this.viewport.width);
+            if (Gantt.minDisplayRatio > Gantt.currentDisplayRatio) {
+                Gantt.minDisplayRatio = 80;
+            }
             Gantt.taskLabelWidthOriginal = (Gantt.currentDisplayRatio - Gantt.minDisplayRatio) * this.viewport.width / 100;
 
             let toggleIconId: Selection<SVGAElement>;
-            toggleIconId = d3.select('#ToggleIcon');
+            toggleIconId = d3.select('#gantt_ToggleIcon');
             if (options.type === 2) {
                 if (this.viewModel.settings.taskLabels.isExpanded) {
-                    d3.select('.task-lines').attr('visibility', 'visible');
-                    d3.select('.toggle-task-group').attr('visibility', 'visible');
-                    $('.bottomTaskDiv').show();
+                    d3.select('.gantt_task-lines').attr('visibility', 'visible');
+                    d3.select('.gantt_toggle-task-group').attr('visibility', 'visible');
+                    $('.gantt_bottomTaskDiv').show();
                     toggleIconId.attr('href', Gantt.collapseImage);
                     toggleIconId.classed('collapse', true);
                     toggleIconId.classed('expand', false);
                     Gantt.taskLabelWidth = Gantt.taskLabelWidthOriginal;
                 } else {
-                    d3.select('.task-lines').attr('visibility', 'hidden');
-                    d3.select('.toggle-task-group').attr('visibility', 'hidden');
-                    $('.bottomTaskDiv').hide();
+                    d3.select('.gantt_task-lines').attr('visibility', 'hidden');
+                    d3.select('.gantt_toggle-task-group').attr('visibility', 'hidden');
+                    $('.gantt_bottomTaskDiv').hide();
                     toggleIconId.attr('href', Gantt.expandImage);
                     toggleIconId.classed('collapse', false);
                     toggleIconId.classed('expand', true);
@@ -2253,12 +2246,12 @@ module powerbi.extensibility.visual {
             }
 
             if (Gantt.kpiLabelWidth === 0) {
-                $('.kpiImagePanel').hide();
+                $('.gantt_kpiImagePanel').hide();
             } else {
-                if (d3.select('#KPIToggle').classed('expand')) {
+                if (d3.select('#gantt_KPIToggle').classed('expand')) {
                     Gantt.kpiLabelWidth = 20;
                 }
-                $('.kpiImagePanel').show();
+                $('.gantt_kpiImagePanel').show();
             }
 
             Gantt.visualCoordinates = {
@@ -2267,12 +2260,12 @@ module powerbi.extensibility.visual {
             };
 
             if (this.viewModel.settings.taskLabels.show) {
-                if (d3.select('#ToggleIcon').classed('collapse')) {
+                if (d3.select('#gantt_ToggleIcon').classed('collapse')) {
                     Gantt.taskLabelWidth = Gantt.taskLabelWidthOriginal;
                 } else {
                     Gantt.taskLabelWidth = 0;
                 }
-                d3.selectAll('.timelinePanel, .barPanel').style({ 'border-left-width': '1px' });
+                d3.selectAll('.gantt_timelinePanel, .gantt_barPanel').style({ 'border-left-width': '1px' });
             } else {
                 Gantt.taskLabelWidth = -20;
             }
@@ -2282,18 +2275,19 @@ module powerbi.extensibility.visual {
             if (this.viewport.width < Gantt.taskLabelWidth + Gantt.kpiLabelWidth + 50) {
                 Gantt.taskLabelWidth = -10;
                 Gantt.kpiLabelWidth = 0;
-                $('.taskPanel, .imagePanel , .kpiPanel, .kpiTitlePanel, .kpiImagePanel, .bottomTaskDiv').hide();
+                $('.gantt_taskPanel, .gantt_imagePanel , .gantt_kpiPanel, .gantt_kpiTitlePanel, .gantt_kpiImagePanel, .gantt_bottomTaskDiv')
+                    .hide();
             } else {
-                $('.taskPanel, .imagePanel').show();
+                $('.gantt_taskPanel, .gantt_imagePanel').show();
                 if (!this.viewModel.settings.taskLabels.show) {
                     Gantt.taskLabelWidth = -20;
                 }
                 if (Gantt.kpiLabelWidth !== 0) {
-                    $('.kpiPanel, .kpiTitlePanel, .kpiImagePanel, .bottomTaskDiv').show();
+                    $('.gantt_kpiPanel, .gantt_kpiTitlePanel, .gantt_kpiImagePanel, .gantt_bottomTaskDiv').show();
                 }
             }
-            if (d3.select('#ToggleIcon').classed('expand')) {
-                $('.bottomTaskDiv').hide();
+            if (d3.select('#gantt_ToggleIcon').classed('expand')) {
+                $('.gantt_bottomTaskDiv').hide();
             }
 
             widthFromPercent = this.viewport.width * Gantt.currentDisplayRatio / 100;
@@ -2321,10 +2315,12 @@ module powerbi.extensibility.visual {
             let yearNum: number;
             let datamin: number;
             let datamax: number;
+            let categoryLengthPrev: number;
             if (Gantt.dataMIN !== Gantt.maxSafeInteger) { datamin = Gantt.dataMIN; }
             if (Gantt.dataMAX !== Gantt.minSafeInteger) { datamax = Gantt.dataMAX; }
             startDate = Gantt.earliestStartDate;
             endDate = Gantt.lastestEndDate;
+            categoryLengthPrev = getValue<number>(objects, 'categoryColumnsWidth', 'categoryLength', 0);
 
             if (datamax === undefined && Gantt.isDateData === false) {
                 datamin = 0;
@@ -2381,6 +2377,9 @@ module powerbi.extensibility.visual {
                 let taskSvgWidth: number;
                 taskSvgWidth = $(dotLiteral + Selectors.taskPanel.class).width();
                 Gantt.columnWidth = taskSvgWidth / this.viewModel.tasksNew[0].name.length;
+                if (categoryLengthPrev === 0 || categoryLengthPrev !== this.viewModel.tasksNew[0].name.length) {
+                    this.resetResizeData(this.viewModel.tasksNew[0].name.length, this.viewModel);
+                }
                 this.updateTaskLabels(this.viewModel.tasksNew, this.viewModel.settings.taskLabels.width);
                 this.updateElementsPositions(this.viewport, this.margin);
             } else if (datamax !== undefined && datamax !== null && datamax !== Gantt.minSafeInteger) {
@@ -2449,6 +2448,9 @@ module powerbi.extensibility.visual {
                 let taskSvgWidth: number;
                 taskSvgWidth = $(dotLiteral + Selectors.taskPanel.class).width();
                 Gantt.columnWidth = taskSvgWidth / this.viewModel.tasksNew[0].name.length;
+                if (categoryLengthPrev === 0 || categoryLengthPrev !== this.viewModel.tasksNew[0].name.length) {
+                    this.resetResizeData(this.viewModel.tasksNew[0].name.length, this.viewModel);
+                }
                 this.updateTaskLabels(this.viewModel.tasksNew, this.viewModel.settings.taskLabels.width);
                 this.updateElementsPositions(this.viewport, this.margin);
             } else if (startDate && Gantt.isDateData) {
@@ -2569,29 +2571,32 @@ module powerbi.extensibility.visual {
                 let taskSvgWidth: number;
                 taskSvgWidth = $(dotLiteral + Selectors.taskPanel.class).width();
                 Gantt.columnWidth = taskSvgWidth / this.viewModel.tasksNew[0].name.length;
+                if (categoryLengthPrev === 0 || categoryLengthPrev !== this.viewModel.tasksNew[0].name.length) {
+                    this.resetResizeData(this.viewModel.tasksNew[0].name.length, this.viewModel);
+                }
                 this.updateTaskLabels(this.viewModel.tasksNew, this.viewModel.settings.taskLabels.width);
                 this.updateElementsPositions(this.viewport, this.margin);
             }
 
             this.adjustResizing(this.viewModel.tasksNew, this.viewModel.settings.taskLabels.width, this.viewModel);
-            this.persistResizeData(this.viewModel.tasksNew[0].name.length, this.viewModel);
+
             if ((this.viewModel.settings.legend.show
-                && (this.viewport.width > $('.legendIndicatorPanel').innerWidth() + 100)
-                && this.viewport.height > $('.legendIndicatorPanel').innerHeight() + 50
+                && (this.viewport.width > $('.gantt_legendIndicatorPanel').innerWidth() + 100)
+                && this.viewport.height > $('.gantt_legendIndicatorPanel').innerHeight() + 50
                 && this.viewModel.kpiData.length > 0)
-                && (parseFloat(d3.select('.legendPanel').style('left')) > parseFloat(d3.select('.barPanel').style('left')))) {
-                $('.legendPanel').show();
+                && (parseFloat(d3.select('.gantt_legendPanel').style('left')) > parseFloat(d3.select('.gantt_barPanel').style('left')))) {
+                $('.gantt_legendPanel').show();
                 if ($('#LegendToggleImage').hasClass('visible')) {
-                    $('.legendIndicatorPanel').show();
+                    $('.gantt_legendIndicatorPanel').show();
                     $('.arrow').show();
                 } else {
-                    $('.legendIndicatorPanel').hide();
+                    $('.gantt_legendIndicatorPanel').hide();
                     $('.arrow').hide();
                 }
             } else {
                 $('.arrow').hide();
-                $('.legendPanel').hide();
-                $('.legendIndicatorPanel').hide();
+                $('.gantt_legendPanel').hide();
+                $('.gantt_legendIndicatorPanel').hide();
             }
 
             if (this.interactivityService) {
@@ -2604,14 +2609,24 @@ module powerbi.extensibility.visual {
                 };
                 this.interactivityService.bind(this.viewModel.tasksNew, this.behavior, behaviorOptions);
             }
-            this.redrawChart(this);
+
+            if (this.viewModel.settings.columnHeader.columnOutline === 'leftOnly' ||
+                this.viewModel.settings.columnHeader.columnOutline === 'leftRight' ||
+                this.viewModel.settings.columnHeader.columnOutline === 'frame') {
+                const drillAllPanelWidth: number = $('.gantt_drillAllPanel2').width();
+                $('.gantt_drillAllPanel2').width((drillAllPanelWidth - 1) + pxLiteral);
+            }
+            this.sortCategories(this);
+            if (d3.select('#gantt_ToggleIcon').classed('expand')) {
+                $('.gantt_category0').hide();
+            }
         }
 
         private renderCustomLegendIndicator(): void {
-            this.legendIndicatorTitleSvg.html('');
-            this.phaseIndicatorSvg.html('');
-            this.kpiIndicatorSvg.html('');
-            this.milestoneIndicatorSvg.html('');
+            this.legendIndicatorTitleSvg.selectAll('*').remove();
+            this.phaseIndicatorSvg.selectAll('*').remove();
+            this.kpiIndicatorSvg.selectAll('*').remove();
+            this.milestoneIndicatorSvg.selectAll('*').remove();
             let indicatorTitleGroup: Selection<HTMLElement>;
             let indicatorTitle: Selection<HTMLElement>;
             let kpiGroup: Selection<HTMLElement>;
@@ -2760,7 +2775,7 @@ module powerbi.extensibility.visual {
 
             indicatorTitleGroup = this.legendIndicatorTitleSvg
                 .append('g')
-                .classed('indicatorTitle', true);
+                .classed('gantt_indicatorTitle', true);
 
             if (totalKPIs !== 0) {
                 indicatorTitle = indicatorTitleGroup
@@ -2950,7 +2965,7 @@ module powerbi.extensibility.visual {
                     milestoneDescText = eachMilestone
                         .append('text')
                         .attr({
-                            class: 'milestoneLegend milestoneDescText',
+                            class: 'gantt_milestoneLegend milestoneDescText',
                             'data-milestonenamelegend': Gantt.milestoneNames[milestoneCounter],
                             x: descTextXCoordinate,
                             y: eachIndicatorGroupStartYCoordinate + eachIndiactorRowHeight * milestoneCounter + 5,
@@ -2985,7 +3000,7 @@ module powerbi.extensibility.visual {
                     phaseIcon = eachPhase
                         .append('rect')
                         .attr({
-                            class: 'phaseLegend phaseIcon',
+                            class: 'gantt_phaseLegend phaseIcon',
                             'data-phasenamelegend': Gantt.phaseNames[phaseCounter],
                             x: phaseIconXCoordinate,
                             y: eachIndicatorGroupStartYCoordinate + eachIndiactorRowHeight * phaseCounter - 5,
@@ -2997,7 +3012,7 @@ module powerbi.extensibility.visual {
                     phaseDescText = eachPhase
                         .append('text')
                         .attr({
-                            class: 'phaseLegend phaseDescText',
+                            class: 'gantt_phaseLegend phaseDescText',
                             'data-phasenamelegend': Gantt.phaseNames[phaseCounter],
                             x: descTextXCoordinate,
                             y: eachIndicatorGroupStartYCoordinate + eachIndiactorRowHeight * phaseCounter + 5,
@@ -3126,11 +3141,11 @@ module powerbi.extensibility.visual {
                     width: PixelConverter.toString(this.margin.left + axisLength + Gantt.defaultValues.ResourceWidth)
                 });
 
-            if ($('.bottomPanel').innerHeight() < $('.barPanel').innerHeight()) {
-                $('.barPanel').css('width', $('.barPanel').innerWidth() - 20);
+            if ($('.gantt_bottomPanel').innerHeight() < $('.gantt_barPanel').innerHeight()) {
+                $('.gantt_barPanel').css('width', $('.gantt_barPanel').innerWidth() - 20);
             }
             let currentScrollPosition: string;
-            if ($('.barPanel').innerWidth() < thisObj.margin.left + axisLength + Gantt.defaultValues.ResourceWidth) {
+            if ($('.gantt_barPanel').innerWidth() < thisObj.margin.left + axisLength + Gantt.defaultValues.ResourceWidth) {
                 let bottomMilestoneScrollPosition: number = 0;
                 if (Gantt.isDateData) {
                     currentScrollPosition = thisObj.viewModel.settings.scrollPosition.position.toLowerCase();
@@ -3145,42 +3160,42 @@ module powerbi.extensibility.visual {
                         bottomMilestoneScrollPosition = thisObj.timeScale(new Date());
                         break;
                     case 'end':
-                        bottomMilestoneScrollPosition = $('.barSvg').innerWidth();
+                        bottomMilestoneScrollPosition = $('.gantt_barSvg').innerWidth();
                         break;
                     default:
                 }
-                document.getElementsByClassName('bottomMilestonePanel')[0].scrollLeft = bottomMilestoneScrollPosition;
+                document.getElementsByClassName('gantt_bottomMilestonePanel')[0].scrollLeft = bottomMilestoneScrollPosition;
                 this.setBottomScrollPosition(bottomMilestoneScrollPosition);
             }
         }
         private setBottomScrollPosition(bottomMilestoneScrollPosition: number): void {
-            if (document.getElementsByClassName('barPanel')) {
-                document.getElementsByClassName('barPanel')[0].scrollLeft = bottomMilestoneScrollPosition;
+            if (document.getElementsByClassName('gantt_barPanel')) {
+                document.getElementsByClassName('gantt_barPanel')[0].scrollLeft = bottomMilestoneScrollPosition;
             }
-            if (document.getElementsByClassName('timelinePanel')) {
-                document.getElementsByClassName('timelinePanel')[0].scrollLeft = bottomMilestoneScrollPosition;
+            if (document.getElementsByClassName('gantt_timelinePanel')) {
+                document.getElementsByClassName('gantt_timelinePanel')[0].scrollLeft = bottomMilestoneScrollPosition;
             }
         }
 
         private setBottomTaskScrollPosition(bottomTaskScrollPosition: number): void {
-            if (document.getElementsByClassName('taskPanel')) {
-                document.getElementsByClassName('taskPanel')[0].scrollLeft = bottomTaskScrollPosition;
+            if (document.getElementsByClassName('gantt_taskPanel')) {
+                document.getElementsByClassName('gantt_taskPanel')[0].scrollLeft = bottomTaskScrollPosition;
             }
-            if (document.getElementsByClassName('drillAllPanel')) {
-                document.getElementsByClassName('drillAllPanel')[0].scrollLeft = bottomTaskScrollPosition;
+            if (document.getElementsByClassName('gantt_drillAllPanel')) {
+                document.getElementsByClassName('gantt_drillAllPanel')[0].scrollLeft = bottomTaskScrollPosition;
             }
-            if (document.getElementsByClassName('drillAllPanel2')) {
-                document.getElementsByClassName('drillAllPanel2')[0].scrollLeft = bottomTaskScrollPosition;
+            if (document.getElementsByClassName('gantt_drillAllPanel2')) {
+                document.getElementsByClassName('gantt_drillAllPanel2')[0].scrollLeft = bottomTaskScrollPosition;
             }
         }
 
         private addLegendInteractiveEvent(thisObj: Gantt): void {
-            $('.phaseLegend').on('click', function (event: JQueryMouseEventObject): void {
+            $('.gantt_phaseLegend').on('click', function (event: JQueryMouseEventObject): void {
                 event.stopPropagation();
                 thisObj.legendSelection(this, thisObj, 'data-phasename');
             });
 
-            $('.milestoneLegend').on('click', function (event: JQueryMouseEventObject): void {
+            $('.gantt_milestoneLegend').on('click', function (event: JQueryMouseEventObject): void {
                 event.stopPropagation();
                 thisObj.legendSelection(this, thisObj, 'data-milestonename');
             });
@@ -3202,9 +3217,9 @@ module powerbi.extensibility.visual {
                 } else {
                     $(thisCurrent).parent().removeClass('activeLegend');
                     $(openingSquareBracket + dataAttribute + legendEqualsQuote + legendDataAttrName + quoteClosingSquareBracket)
-                        .addClass('loweropacityLegend').removeClass('higheropacityLegend');
+                        .addClass('gantt_loweropacityLegend').removeClass('gantt_higheropacityLegend');
                     $(openingSquareBracket + dataAttribute + equalsQuote + legendDataAttrName + quoteClosingSquareBracket)
-                        .children().addClass('loweropacity').removeClass('higheropacity');
+                        .children().addClass('gantt_loweropacity').removeClass('gantt_higheropacity');
                     let index: number;
                     index = Gantt.currentSelectionState[milestoneNamesLiteral].indexOf(legendDataAttrName);
                     Gantt.currentSelectionState[milestoneNamesLiteral].splice(index, 1, 0);
@@ -3214,7 +3229,8 @@ module powerbi.extensibility.visual {
                 if (Gantt.totalLegendSelected === 0) {
                     thisGlobal.moveAllTOBackground();
                     Gantt.currentSelectionState = {};
-                    $('.phaseLegend, .milestoneLegend').removeClass('higheropacityLegend').addClass('loweropacityLegend');
+                    $('.gantt_phaseLegend, .gantt_milestoneLegend')
+                        .removeClass('gantt_higheropacityLegend').addClass('gantt_loweropacityLegend');
                     Gantt.currentSelectionState[clickedTypeLiteral] = 'legend';
                     Gantt.currentSelectionState[phaseNamesLiteral] = [];
                     Gantt.currentSelectionState[milestoneNamesLiteral] = [];
@@ -3223,9 +3239,9 @@ module powerbi.extensibility.visual {
                 if (Gantt.totalLegendSelected !== Gantt.totalLegendPresent) {
                     $(thisCurrent).parent().addClass('activeLegend');
                     $(openingSquareBracket + dataAttribute + legendEqualsQuote + legendDataAttrName + quoteClosingSquareBracket)
-                        .removeClass('loweropacityLegend').addClass('higheropacityLegend');
+                        .removeClass('gantt_loweropacityLegend').addClass('gantt_higheropacityLegend');
                     $(openingSquareBracket + dataAttribute + equalsQuote + legendDataAttrName + quoteClosingSquareBracket)
-                        .children().removeClass('loweropacity').addClass('higheropacity');
+                        .children().removeClass('gantt_loweropacity').addClass('gantt_higheropacity');
                     if (dataAttribute === 'data-milestonename') {
                         Gantt.currentSelectionState[milestoneNamesLiteral].push(legendDataAttrName);
                     } else {
@@ -3241,29 +3257,45 @@ module powerbi.extensibility.visual {
         private addLegendHideShowEvents(thisObj: Gantt): void {
             let $LegendToggleImageId: JQuery;
             $LegendToggleImageId = $('#LegendToggleImage');
-            $('.legendToggle').on('click', function (event: JQueryMouseEventObject): void {
+            $('.gantt_legendToggle').on('click', function (event: JQueryMouseEventObject): void {
                 event.stopPropagation();
                 if ($LegendToggleImageId.hasClass('notVisible')) {
                     $LegendToggleImageId.removeClass('notVisible').addClass('visible');
                     $LegendToggleImageId.attr('href', Gantt.drillUpImage);
-                    $('.legendIndicatorPanel').show();
+                    $('.gantt_legendIndicatorPanel').show();
                     $('.arrow').show();
                 } else {
                     $LegendToggleImageId.removeClass('visible').addClass('notVisible');
                     $LegendToggleImageId.attr('href', Gantt.drillDownImage);
-                    $('.legendIndicatorPanel').hide();
+                    $('.gantt_legendIndicatorPanel').hide();
                     $('.arrow').hide();
                 }
             });
         }
 
         private addExpandCollapseEvent(thisObj: Gantt): void {
-            d3.selectAll('#ToggleIcon').on('click', function (): void {
-                thisObj.expandCollapseTaskKPIPanel(thisObj, '#ToggleIcon', '.task-lines', '.toggle-task-group', true);
+            d3.selectAll('#gantt_ToggleIcon').on('click', function (): void {
+                thisObj.expandCollapseTaskKPIPanel(thisObj, '#gantt_ToggleIcon', '.gantt_task-lines', '.gantt_toggle-task-group', true);
+                let $LegendToggleImageId: JQuery;
+                $LegendToggleImageId = $('#LegendToggleImage');
+                if ($LegendToggleImageId.hasClass('visible')) {
+                    $LegendToggleImageId.removeClass('visible').addClass('notVisible');
+                    $LegendToggleImageId.attr('href', Gantt.drillDownImage);
+                    $('.gantt_legendIndicatorPanel').hide();
+                    $('.arrow').hide();
+                }
             });
 
-            d3.selectAll('#KPIToggle').on('click', function (): void {
-                thisObj.expandCollapseTaskKPIPanel(thisObj, '#KPIToggle', '.kpi-lines', '.toggle-kpi-group', false);
+            d3.selectAll('#gantt_KPIToggle').on('click', function (): void {
+                thisObj.expandCollapseTaskKPIPanel(thisObj, '#gantt_KPIToggle', '.gantt_kpi-lines', '.toggle-kpi-group', false);
+                let $LegendToggleImageId: JQuery;
+                $LegendToggleImageId = $('#LegendToggleImage');
+                if ($LegendToggleImageId.hasClass('visible')) {
+                    $LegendToggleImageId.removeClass('visible').addClass('notVisible');
+                    $LegendToggleImageId.attr('href', Gantt.drillDownImage);
+                    $('.gantt_legendIndicatorPanel').hide();
+                    $('.arrow').hide();
+                }
             });
         }
 
@@ -3278,8 +3310,8 @@ module powerbi.extensibility.visual {
                 element.attr('href', Gantt.expandImage);
                 element.classed('collapse', false);
                 element.classed('expand', true);
-                if (elementId === '#ToggleIcon') {
-                    $('.bottomTaskDiv').hide();
+                if (elementId === '#gantt_ToggleIcon') {
+                    $('.gantt_bottomTaskDiv').hide();
                 }
                 if (isTaskLabel) {
                     Gantt.taskLabelWidth = -4;
@@ -3292,8 +3324,8 @@ module powerbi.extensibility.visual {
                 element.attr('href', Gantt.collapseImage);
                 element.classed('collapse', true);
                 element.classed('expand', false);
-                if (elementId === '#ToggleIcon') {
-                    $('.bottomTaskDiv').show();
+                if (elementId === '#gantt_ToggleIcon') {
+                    $('.gantt_bottomTaskDiv').show();
                 }
                 if (isTaskLabel) {
                     Gantt.taskLabelWidth = (Gantt.currentDisplayRatio - Gantt.minDisplayRatio) * this.viewport.width / 100;
@@ -3302,8 +3334,14 @@ module powerbi.extensibility.visual {
                 }
             }
             thisObj.redrawChart(thisObj);
-            if (d3.select('#ToggleIcon').classed('expand')) {
-                $('.bottomTaskDiv').hide();
+            if (d3.select('#gantt_ToggleIcon').classed('expand')) {
+                $('.gantt_category0').hide();
+                $('.gantt_bottomTaskDiv').hide();
+            }
+            if (d3.select('.gantt_drillAllPanel2')[0][0] &&
+                d3.select('.gantt_taskPanel')[0][0] &&
+                parseInt(d3.select('.gantt_taskPanel').style('width'), 10) >= 1) {
+                d3.select('.gantt_drillAllPanel2').style('width', PixelConverter.toString($('.gantt_taskPanel').width() - 1));
             }
         }
 
@@ -3319,7 +3357,6 @@ module powerbi.extensibility.visual {
                     }
                     Gantt.sortLevel = iCounter;
                     thisObj.viewModel = Gantt.converter(Gantt.globalOptions.dataViews[0], thisObj.host, thisObj.colors);
-                    thisObj.redrawChart(thisObj);
 
                     for (let jCounter: number = 0; jCounter < Gantt.numberOfCategories; jCounter++) {
                         if (jCounter !== iCounter) {
@@ -3343,10 +3380,13 @@ module powerbi.extensibility.visual {
             $('.milestoneHighlighted').removeClass('milestoneHighlighted');
             $('.phaseHighlighted').removeClass('phaseHighlighted');
             $('.activeLegend').removeClass('activeLegend');
-            $('.task-rect').removeClass('loweropacity').removeClass('higheropacity').removeClass('activeRect');
-            $('.task-progress').removeClass('loweropacity').removeClass('higheropacity').removeClass('activeProgress');
-            $('.actual-milestone').removeClass('loweropacity').removeClass('higheropacity').removeClass('activeMilestone');
-            $('.phaseLegend, .milestoneLegend').removeClass('higheropacityLegend').removeClass('loweropacityLegend');
+            $('.gantt_task-rect').removeClass('gantt_loweropacity').removeClass('gantt_higheropacity').removeClass('gantt_activeRect');
+            $('.gantt_task-progress').removeClass('gantt_loweropacity')
+                .removeClass('gantt_higheropacity').removeClass('gantt_activeProgress');
+            $('.gantt_actual-milestone').removeClass('gantt_loweropacity')
+                .removeClass('gantt_higheropacity').removeClass('gantt_activeMilestone');
+            $('.gantt_phaseLegend, .gantt_milestoneLegend')
+                .removeClass('gantt_higheropacityLegend').removeClass('gantt_loweropacityLegend');
         }
 
         private moveAllTOBackground(): void {
@@ -3354,10 +3394,12 @@ module powerbi.extensibility.visual {
             $('.milestoneHighlighted').removeClass('milestoneHighlighted');
             $('.phaseHighlighted').removeClass('phaseHighlighted');
             $('.activeLegend').removeClass('activeLegend');
-            $('.task-rect').addClass('loweropacity').removeClass('higheropacity').removeClass('activeRect');
-            $('.task-progress').addClass('loweropacity').removeClass('higheropacity').removeClass('activeProgress');
-            $('.actual-milestone').addClass('loweropacity').removeClass('higheropacity').removeClass('activeMilestone');
-            $('.phaseLegend, .milestoneLegend').removeClass('higheropacityLegend').removeClass('loweropacityLegend');
+            $('.gantt_task-rect').addClass('gantt_loweropacity').removeClass('gantt_higheropacity').removeClass('gantt_activeRect');
+            $('.gantt_task-progress').addClass('gantt_loweropacity').removeClass('gantt_higheropacity').removeClass('gantt_activeProgress');
+            $('.gantt_actual-milestone').addClass('gantt_loweropacity')
+                .removeClass('gantt_higheropacity').removeClass('gantt_activeMilestone');
+            $('.gantt_phaseLegend, .gantt_milestoneLegend')
+                .removeClass('gantt_higheropacityLegend').removeClass('gantt_loweropacityLegend');
         }
 
         private redrawChart(thisObj: Gantt): void {
@@ -3402,6 +3444,7 @@ module powerbi.extensibility.visual {
             thisObj.updateElementsPositions(thisObj.viewport, thisObj.margin);
             thisObj.adjustResizing(thisObj.viewModel.tasksNew, thisObj.viewModel.settings.taskLabels.width, thisObj.viewModel);
             thisObj.sortCategories(thisObj);
+
         }
 
         private static getDateType(type: string): number {
@@ -3629,7 +3672,7 @@ module powerbi.extensibility.visual {
             taskGridLinesShow = this.viewModel.settings.taskGridlines.show;
             taskGridLinesInterval = this.viewModel.settings.taskGridlines.interval;
             taskGridLinesColor = this.viewModel.settings.taskGridlines.fill;
-            this.gridGroup.html('');
+            this.gridGroup.selectAll('*').remove();
             let xAxis: d3.svg.Axis;
             xAxis = xAxisProperties.axis;
             xAxis.tickSize(this.getTodayLineLength(totaltasks));
@@ -3728,8 +3771,6 @@ module powerbi.extensibility.visual {
             let taskLabelsColor: string;
             let taskLabelsFontSize: number;
             let taskLabelsFontFamily: string;
-            let vertGridColor: string;
-            let horGridColor: string;
             let totalKPIs: number;
             let totalCategories: number;
             let normalizer: number;
@@ -3746,9 +3787,10 @@ module powerbi.extensibility.visual {
             let taskGridLinesColor: string;
             let taskGridLinesInterval: number;
             let isTaskLabelHierarchyView: boolean;
-            let taskLabelHorizGrid: boolean;
-            let taskLabelVertGrid: boolean;
             let thisObj: Gantt;
+            let barPanelLeft: number;
+            let kpiPanelWidth: number;
+            let lastRectX: number;
 
             thisObj = this;
             columnHeaderColor = this.viewModel.settings.columnHeader.fill;
@@ -3761,8 +3803,6 @@ module powerbi.extensibility.visual {
             taskLabelsColor = this.viewModel.settings.taskLabels.fill;
             taskLabelsFontSize = this.viewModel.settings.taskLabels.fontSize;
             taskLabelsFontFamily = this.viewModel.settings.taskLabels.fontFamily;
-            vertGridColor = this.viewModel.settings.taskLabels.fill2;
-            horGridColor = this.viewModel.settings.taskLabels.fill3;
             totalKPIs = this.viewModel.kpiData.length;
             totalCategories = tasks[0].name.length;
             normalizer = (this.viewModel.settings.taskLabels.fontSize * Gantt.maximumNormalizedFontSize) / Gantt.maximumFontSize;
@@ -3788,13 +3828,13 @@ module powerbi.extensibility.visual {
             taskGridLinesColor = this.viewModel.settings.taskGridlines.fill;
             taskGridLinesInterval = this.viewModel.settings.taskGridlines.interval;
             isTaskLabelHierarchyView = this.viewModel.settings.taskLabels.isHierarchy;
-            taskLabelHorizGrid = this.viewModel.settings.taskLabels.horizGrid;
-            taskLabelVertGrid = this.viewModel.settings.taskLabels.vertGrid;
 
             let $DrillAllPanel2Class: JQuery;
-            $DrillAllPanel2Class = $('.drillAllPanel2');
+            $DrillAllPanel2Class = $('.gantt_drillAllPanel2');
             let $KpiTitlePanelClass: JQuery;
-            $KpiTitlePanelClass = $('.kpiTitlePanel');
+            $KpiTitlePanelClass = $('.gantt_kpiTitlePanel');
+            let $TaskSvg: JQuery;
+            $TaskSvg = $('.gantt_taskSvg');
 
             $KpiTitlePanelClass.css('background-color', columnHeaderBgColor);
             $DrillAllPanel2Class.css('background-color', columnHeaderBgColor);
@@ -3806,6 +3846,8 @@ module powerbi.extensibility.visual {
                 $DrillAllPanel2Class.css('border-bottom', 'solid white 0px');
                 $KpiTitlePanelClass.css('border-right', 'solid white 0px');
                 $DrillAllPanel2Class.css('border-left', 'solid white 0px');
+                $DrillAllPanel2Class.css('border-right', 'solid grey 1px');
+                $TaskSvg.css('margin-left', '0px');
             } else if (columnHeaderOutline === 'bottomOnly') {
                 $KpiTitlePanelClass.css('border-top', 'solid white 0px');
                 $DrillAllPanel2Class.css('border-top', 'solid white 0px');
@@ -3813,6 +3855,8 @@ module powerbi.extensibility.visual {
                 $DrillAllPanel2Class.css('border-bottom', 'solid #02B8AB 1px');
                 $KpiTitlePanelClass.css('border-right', 'solid white 0px');
                 $DrillAllPanel2Class.css('border-left', 'solid white 0px');
+                $DrillAllPanel2Class.css('border-right', 'solid grey 1px');
+                $TaskSvg.css('margin-left', '0px');
             } else if (columnHeaderOutline === 'topOnly') {
                 $KpiTitlePanelClass.css('border-top', 'solid #02B8AB 1px');
                 $DrillAllPanel2Class.css('border-top', 'solid #02B8AB 1px');
@@ -3820,6 +3864,8 @@ module powerbi.extensibility.visual {
                 $DrillAllPanel2Class.css('border-bottom', 'solid white 0px');
                 $KpiTitlePanelClass.css('border-right', 'solid white 0px');
                 $DrillAllPanel2Class.css('border-left', 'solid white 0px');
+                $DrillAllPanel2Class.css('border-right', 'solid grey 1px');
+                $TaskSvg.css('margin-left', '0px');
             } else if (columnHeaderOutline === 'leftOnly') {
                 $KpiTitlePanelClass.css('border-top', 'solid white 0px');
                 $DrillAllPanel2Class.css('border-top', 'solid white 0px');
@@ -3827,13 +3873,22 @@ module powerbi.extensibility.visual {
                 $DrillAllPanel2Class.css('border-bottom', 'solid white 0px');
                 $KpiTitlePanelClass.css('border-right', 'solid white 0px');
                 $DrillAllPanel2Class.css('border-left', 'solid #02B8AB 1px');
+                $DrillAllPanel2Class.css('border-right', 'solid grey 1px');
+                $TaskSvg.css('margin-left', '1px');
             } else if (columnHeaderOutline === 'rightOnly') {
                 $KpiTitlePanelClass.css('border-top', 'solid white 0px');
                 $DrillAllPanel2Class.css('border-top', 'solid white 0px');
                 $KpiTitlePanelClass.css('border-bottom', 'solid white 0px');
                 $DrillAllPanel2Class.css('border-bottom', 'solid white 0px');
-                $KpiTitlePanelClass.css('border-right', 'solid #02B8AB 1px');
+                if (Gantt.isKpiPresent) {
+                    $KpiTitlePanelClass.css('border-right', 'solid #02B8AB 1px');
+                    $DrillAllPanel2Class.css('border-right', 'solid grey 1px');
+                } else {
+                    $KpiTitlePanelClass.css('border-right', 'solid white 0px');
+                    $DrillAllPanel2Class.css('border-right', 'solid #02B8AB 1px');
+                }
                 $DrillAllPanel2Class.css('border-left', 'solid white 0px');
+                $TaskSvg.css('margin-left', '0px');
             } else if (columnHeaderOutline === 'leftRight') {
                 $KpiTitlePanelClass.css('border-top', 'solid white 0px');
                 $DrillAllPanel2Class.css('border-top', 'solid white 0px');
@@ -3841,6 +3896,14 @@ module powerbi.extensibility.visual {
                 $DrillAllPanel2Class.css('border-bottom', 'solid white 0px');
                 $KpiTitlePanelClass.css('border-right', 'solid #02B8AB 1px');
                 $DrillAllPanel2Class.css('border-left', 'solid #02B8AB 1px');
+                if (Gantt.isKpiPresent) {
+                    $KpiTitlePanelClass.css('border-right', 'solid #02B8AB 1px');
+                    $DrillAllPanel2Class.css('border-right', 'solid grey 1px');
+                } else {
+                    $KpiTitlePanelClass.css('border-right', 'solid white 0px');
+                    $DrillAllPanel2Class.css('border-right', 'solid #02B8AB 1px');
+                }
+                $TaskSvg.css('margin-left', '1px');
             } else if (columnHeaderOutline === 'frame') {
                 $KpiTitlePanelClass.css('border-top', 'solid #02B8AB 1px');
                 $DrillAllPanel2Class.css('border-top', 'solid #02B8AB 1px');
@@ -3848,154 +3911,45 @@ module powerbi.extensibility.visual {
                 $DrillAllPanel2Class.css('border-bottom', 'solid #02B8AB 1px');
                 $KpiTitlePanelClass.css('border-right', 'solid #02B8AB 1px');
                 $DrillAllPanel2Class.css('border-left', 'solid #02B8AB 1px');
+                if (Gantt.isKpiPresent) {
+                    $KpiTitlePanelClass.css('border-right', 'solid #02B8AB 1px');
+                    $DrillAllPanel2Class.css('border-right', 'solid grey 1px');
+                } else {
+                    $KpiTitlePanelClass.css('border-right', 'solid white 0px');
+                    $DrillAllPanel2Class.css('border-right', 'solid #02B8AB 1px');
+                }
+                $TaskSvg.css('margin-left', '1px');
             }
 
             let objects: DataViewObjects = null;
             let getJSONString: string;
             let columnWidth: number;
-            let oHorizontalLineX1: number[];
-            let oHorizontalLineX2: number[];
-            let oVerticalLineX: number[];
-            let oTaskLabelX: number[];
-            let maxColumn: number = 0;
-            let categoryChanged: boolean = true;
+            let columnWidthsArr: number[];
+            let taskColumnArr: number[];
+            let horizGridX1Arr: number[];
+            let horizGridX2Arr: number[];
+            let vertGridArr: number[];
             objects = this.viewModel.dataView.metadata.objects;
             columnWidth = 0;
+            columnWidthsArr = [];
+            taskColumnArr = [];
+            horizGridX1Arr = [];
+            horizGridX2Arr = [];
+            vertGridArr = [];
             getJSONString = getValue<string>(objects, 'categoryColumnsWidth', 'width', 'text');
-            oHorizontalLineX1 = [];
-            oHorizontalLineX2 = [];
-            oVerticalLineX = [];
-            oTaskLabelX = [];
-
-            for (let iIterator: number = 0; iIterator < totalCategories; iIterator++) {
-                oHorizontalLineX1[iIterator] = 0;
-                oHorizontalLineX2[iIterator] = 0;
-                oVerticalLineX[iIterator] = 0;
-                oTaskLabelX[iIterator] = 0;
-            }
-
-            if (getJSONString && getJSONString.length !== 0 && getJSONString.indexOf('text') === -1) {
-                let splittedJSON: string[];
-                splittedJSON = getJSONString.split(';');
-                let coumnNumber: number; coumnNumber = 0;
-                for (let iIterator: number = 0; iIterator < splittedJSON.length; iIterator++) {
-                    if (splittedJSON[iIterator].indexOf('horizontal-line') !== -1) {
-                        let oSplittedHorizGrid: string[];
-                        let oSplittedAttr: string[];
-                        let attr: string;
-                        let columnNUmber: string;
-                        oSplittedHorizGrid = splittedJSON[iIterator].split(':');
-                        oSplittedAttr = oSplittedHorizGrid[0].split('-');
-                        attr = oSplittedAttr[2];
-                        columnNUmber = oSplittedAttr[1].substr(4, oSplittedAttr[1].length);
-                        if (attr === 'x1') {
-                            oHorizontalLineX1[parseInt(columnNUmber, 10)] = parseFloat(oSplittedHorizGrid[1]);
-                        } else {
-                            oHorizontalLineX2[parseInt(columnNUmber, 10)] = parseFloat(oSplittedHorizGrid[1]);
-                        }
-                        if (maxColumn < parseInt(columnNUmber, 10)) {
-                            maxColumn = parseInt(columnNUmber, 10);
-                        }
-                    } else if (splittedJSON[iIterator].indexOf('vertical-line') !== -1) {
-                        let oSplittedVertGrid: string[];
-                        let columnNumber: string;
-                        oSplittedVertGrid = splittedJSON[iIterator].split(':');
-                        columnNumber = oSplittedVertGrid[0].substr(13, oSplittedVertGrid[0].length - 13);
-                        oVerticalLineX[parseInt(columnNumber, 10)] = parseFloat(oSplittedVertGrid[1]);
-                        if (maxColumn < parseInt(columnNumber, 10)) {
-                            maxColumn = parseInt(columnNumber, 10);
-                        }
-                    } else if (splittedJSON[iIterator].indexOf('task-column') !== -1) {
-                        let oSplittedHVertGrid: string[];
-                        let columnNumber: string;
-                        oSplittedHVertGrid = splittedJSON[iIterator].split(':');
-                        columnNumber = oSplittedHVertGrid[0].substr(11, oSplittedHVertGrid[0].length - 11);
-                        oTaskLabelX[parseInt(columnNumber, 10)] = parseFloat(oSplittedHVertGrid[1]);
-                        if (maxColumn < parseInt(columnNumber, 10)) {
-                            maxColumn = parseInt(columnNumber, 10);
-                        }
-                    }
-                }
-            }
-            if (maxColumn !== totalCategories) {
-                categoryChanged = false;
-            }
-
             let numOfCharsAllowedHeader: number = 0;
             numOfCharsAllowedHeader = Gantt.taskLabelWidth / (Gantt.iHeaderSingleCharWidth * this.viewModel.tasksNew[0].name.length);
+            kpiPanelWidth = parseFloat(d3.select('.gantt_kpiPanel').style('left'));
+
+            for (let iIterator: number = 0; iIterator <= 3; iIterator++) {
+                columnWidthsArr[iIterator] = 0;
+                taskColumnArr[iIterator] = 0;
+                horizGridX1Arr[iIterator] = 0;
+                horizGridX2Arr[iIterator] = 0;
+                vertGridArr[iIterator] = 0;
+            }
+
             for (let jCount: number = 0; jCount < totalCategories; jCount++) {
-
-                if (Gantt.numberOfCategories !== 1) {
-                    if (jCount === 0) {
-                        this.drillAllGroup.append('text')
-                            .attr('class', categoryLiteral + jCount + spaceLiteral + taskColumnLiteral + jCount)
-                            .attr('x', 15)
-                            .attr('y', 10);
-                        d3.select(dotLiteral + categoryLiteral + jCount)
-                            .append('title').text(Gantt.getLabelValuesNew(Gantt.categoriesTitle[jCount].toString(), 'text', 50));
-                        if (Gantt.sortOrder === 'asc' || Gantt.sortLevel !== jCount) {
-                            this.drillAllGroup.append('image')
-                                .attr('class', 'sortAsc')
-                                .attr('class', categoryLiteral + jCount)
-                                .attr('id', categoryLiteral + jCount)
-                                .attr('x', 15)
-                                .attr('y', 10)
-                                .attr({
-                                    'xlink:href': Gantt.sortAscOrder,
-                                    width: 7,
-                                    height: 7
-                                });
-                        }
-                    } else {
-                        this.drillAllGroup.append('text')
-                            .attr('class', categoryLiteral + jCount + spaceLiteral + taskColumnLiteral + jCount)
-                            .attr(
-                            'x',
-                            Gantt.taskLineCoordinateX +
-                            ((Gantt.singleCharacterWidth * this.viewModel.settings.taskLabels.width + 25) * jCount))
-                            .attr('y', 10);
-                        d3.select(dotLiteral + categoryLiteral + jCount)
-                            .append('title').text(Gantt.getLabelValuesNew(Gantt.categoriesTitle[jCount].toString(), 'text', 50));
-                        if (Gantt.sortOrder === 'asc' || Gantt.sortLevel !== jCount) {
-                            this.drillAllGroup.append('image')
-                                .attr('class', 'sortAsc')
-                                .attr('class', categoryLiteral + jCount)
-                                .attr('id', categoryLiteral + jCount)
-                                .attr('x', Gantt.taskLineCoordinateX
-                                + ((Gantt.singleCharacterWidth * this.viewModel.settings.taskLabels.width + 25) * jCount))
-                                .attr('y', 10)
-                                .attr({
-                                    'xlink:href': Gantt.sortAscOrder,
-                                    width: 7,
-                                    height: 7
-                                });
-                        }
-                    }
-                } else {
-                    this.drillAllGroup.append('text')
-                        .attr('class', categoryLiteral + jCount + spaceLiteral + taskColumnLiteral + jCount)
-                        .attr('x', Gantt.taskLineCoordinateX
-                        + ((Gantt.singleCharacterWidth * this.viewModel.settings.taskLabels.width + 25) * jCount))
-                        .attr('y', 10);
-
-                    d3.select(dotLiteral + categoryLiteral + jCount)
-                        .append('title').text(Gantt.getLabelValuesNew(Gantt.categoriesTitle[jCount].toString(), 'text', 50));
-
-                    if (Gantt.sortOrder === 'asc' || Gantt.sortLevel !== jCount) {
-                        this.drillAllGroup.append('image')
-                            .attr('class', 'sortAsc')
-                            .attr('class', categoryLiteral + jCount)
-                            .attr('id', categoryLiteral + jCount)
-                            .attr('x', Gantt.taskLineCoordinateX
-                            + ((Gantt.singleCharacterWidth * this.viewModel.settings.taskLabels.width + 25) * jCount))
-                            .attr('y', 10)
-                            .attr({
-                                'xlink:href': Gantt.sortAscOrder,
-                                width: 7,
-                                height: 7
-                            });
-                    }
-                }
 
                 objects = this.viewModel.dataView.metadata.objects;
                 getJSONString = getValue<string>(objects, 'categoryColumnsWidth', 'width', 'text');
@@ -4003,47 +3957,163 @@ module powerbi.extensibility.visual {
                 if (getJSONString && getJSONString.length !== 0 && getJSONString.indexOf('text') === -1) {
                     let splittedJSON: string[];
                     let columnName: string;
+                    let taskColumnName: string;
+                    let horizGridX1: string;
+                    let horizGridX2: string;
+                    let vertGrid: string;
+                    let oSplittedLength: string[];
                     splittedJSON = getJSONString.split(';');
                     columnName = columnLiteral + jCount;
+                    taskColumnName = taskColumnLiteral + jCount;
+                    horizGridX1 = 'horizontal-line';
+                    horizGridX1 += jCount;
+                    horizGridX1 += '-x1';
+                    horizGridX2 = 'horizontal-line';
+                    horizGridX2 += jCount;
+                    horizGridX2 += '-x2';
+                    vertGrid = verticalLineLiteral + jCount;
                     for (let iIterator: number = 0; iIterator < splittedJSON.length; iIterator++) {
-                        if (splittedJSON[iIterator].indexOf(columnName) !== -1) {
-                            let oSplittedLength: string[];
+                        if (splittedJSON[iIterator].indexOf(taskColumnName) !== -1) {
                             oSplittedLength = splittedJSON[iIterator].split(':');
                             columnWidth = parseFloat(oSplittedLength[1]);
+                            taskColumnArr[jCount] = columnWidth;
+                        } else if (splittedJSON[iIterator].indexOf(vertGrid) !== -1) {
+                            oSplittedLength = splittedJSON[iIterator].split(':');
+                            columnWidth = parseFloat(oSplittedLength[1]);
+                            vertGridArr[jCount] = columnWidth;
+                        } else if (splittedJSON[iIterator].indexOf(horizGridX1) !== -1) {
+                            oSplittedLength = splittedJSON[iIterator].split(':');
+                            columnWidth = parseFloat(oSplittedLength[1]);
+                            horizGridX1Arr[jCount] = columnWidth;
+                        } else if (splittedJSON[iIterator].indexOf(horizGridX2) !== -1) {
+                            oSplittedLength = splittedJSON[iIterator].split(':');
+                            columnWidth = parseFloat(oSplittedLength[1]);
+                            horizGridX2Arr[jCount] = columnWidth;
+                        } else if (splittedJSON[iIterator].indexOf(columnName) !== -1) {
+                            oSplittedLength = splittedJSON[iIterator].split(':');
+                            columnWidth = parseFloat(oSplittedLength[1]);
+                            columnWidthsArr[jCount] = columnWidth;
                         }
                     }
                 }
+                const textElement: Selection<HTMLElement> = this.drillAllGroup.append('text')
+                    .attr('class', categoryLiteral + jCount + spaceLiteral + taskColumnLiteral + jCount)
+                    .attr('x', 15)
+                    .attr('y', 10);
 
-                if (Gantt.numberOfCategories !== 1 && columnWidth > 15) {
-                    d3.select(dotLiteral + categoryLiteral + jCount)
-                        .text(Gantt.categoriesTitle[jCount])
-                        .call(AxisHelper.LabelLayoutStrategy.clip, columnWidth - 30, textMeasurementService.svgEllipsis)
-                        .style({
-                            'font-size': (columnHeaderFontSize * Gantt.maximumNormalizedFontSize) / Gantt.maximumFontSize + pxLiteral,
-                            'font-family': columnHeaderFontFamily,
-                            fill: columnHeaderColor,
-                            'background-color': columnHeaderBgColor
-                        });
-                } else if (columnWidth > 15) {
-                    d3.select(categoryClassLiteral + jCount)
-                        .text(Gantt.categoriesTitle[jCount])
-                        .call(AxisHelper.LabelLayoutStrategy.clip, columnWidth - 30, textMeasurementService.svgEllipsis)
-                        .style({
-                            'font-size': (columnHeaderFontSize * Gantt.maximumNormalizedFontSize) / Gantt.maximumFontSize + pxLiteral,
-                            'font-family': columnHeaderFontFamily,
-                            fill: columnHeaderColor,
-                            'background-color': columnHeaderBgColor
-                        });
+                const sortIconImage: Selection<HTMLElement> = this.drillAllGroup.append('image')
+                    .attr('class', 'sortAsc')
+                    .attr('class', categoryLiteral + jCount)
+                    .attr('id', categoryLiteral + jCount)
+                    .attr('y', 10)
+                    .attr('height', 7)
+                    .attr('width', 7);
+
+                if (Gantt.numberOfCategories !== 1) {
+                    if (jCount === 0) {
+                        textElement.attr('x', 15);
+
+                        if (Gantt.sortOrder === 'asc' || Gantt.sortLevel !== jCount) {
+                            sortIconImage
+                                .attr('x', 15)
+                                .attr('xlink:href', Gantt.sortAscOrder);
+                        } else {
+                            sortIconImage
+                                .attr('x', 15)
+                                .attr('xlink:href', Gantt.sortDescOrder);
+                        }
+                    } else {
+                        textElement.attr('x', taskColumnArr[jCount]);
+
+                        if (Gantt.sortOrder === 'asc' || Gantt.sortLevel !== jCount) {
+                            sortIconImage
+                                .attr('x', taskColumnArr[jCount])
+                                .attr('xlink:href', Gantt.sortAscOrder);
+                        } else {
+                            sortIconImage
+                                .attr('x', taskColumnArr[jCount])
+                                .attr('xlink:href', Gantt.sortDescOrder);
+                        }
+                    }
+                } else {
+                    textElement.attr('x', taskColumnArr[jCount]);
+                    if (Gantt.sortOrder === 'asc' || Gantt.sortLevel !== jCount) {
+                        sortIconImage
+                            .attr('x', taskColumnArr[jCount])
+                            .attr('xlink:href', Gantt.sortAscOrder);
+                    } else {
+                        sortIconImage
+                            .attr('x', taskColumnArr[jCount])
+                            .attr('xlink:href', Gantt.sortDescOrder);
+                    }
                 }
+                if (jCount === totalCategories - 1) {
+                    kpiPanelWidth = parseInt(d3.select('.gantt_kpiPanel').style('left'), 10);
+                    lastRectX = parseInt(d3.select(categoryClassLiteral + jCount).attr('x'), 10);
+                    if ((kpiPanelWidth > 0 && lastRectX > kpiPanelWidth - 1) || lastRectX > barPanelLeft - 1) {
+                        d3.select(categoryClassLiteral + jCount)
+                            .text(Gantt.categoriesTitle[jCount])
+                            .style({
+                                'font-size': (columnHeaderFontSize * Gantt.maximumNormalizedFontSize) /
+                                    Gantt.maximumFontSize + pxLiteral,
+                                'font-family': columnHeaderFontFamily,
+                                fill: columnHeaderColor,
+                                'background-color': columnHeaderBgColor
+                            })
+                            .call(
+                            AxisHelper.LabelLayoutStrategy.clip,
+                            100,
+                            textMeasurementService.svgEllipsis);
+                    } else {
+                        d3.select(categoryClassLiteral + jCount)
+                            .text(Gantt.categoriesTitle[jCount])
+                            .style({
+                                'font-size': (columnHeaderFontSize * Gantt.maximumNormalizedFontSize) /
+                                    Gantt.maximumFontSize + pxLiteral,
+                                'font-family': columnHeaderFontFamily,
+                                fill: columnHeaderColor,
+                                'background-color': columnHeaderBgColor
+                            })
+                            .call(
+                            AxisHelper.LabelLayoutStrategy.clip,
+                            kpiPanelWidth -
+                            lastRectX,
+                            textMeasurementService.svgEllipsis);
+                    }
+
+                } else {
+                    if (jCount === 0) {
+                        d3.select(categoryClassLiteral + jCount)
+                            .text(Gantt.categoriesTitle[jCount])
+                            .style({
+                                'font-size': (columnHeaderFontSize * Gantt.maximumNormalizedFontSize) / Gantt.maximumFontSize + pxLiteral,
+                                'font-family': columnHeaderFontFamily,
+                                fill: columnHeaderColor,
+                                'background-color': columnHeaderBgColor
+                            })
+                            .call(AxisHelper.LabelLayoutStrategy.clip, columnWidthsArr[jCount] - 15, textMeasurementService.svgEllipsis);
+                    } else {
+                        d3.select(categoryClassLiteral + jCount)
+                            .text(Gantt.categoriesTitle[jCount])
+                            .style({
+                                'font-size': (columnHeaderFontSize * Gantt.maximumNormalizedFontSize) / Gantt.maximumFontSize + pxLiteral,
+                                'font-family': columnHeaderFontFamily,
+                                fill: columnHeaderColor,
+                                'background-color': columnHeaderBgColor
+                            })
+                            .call(AxisHelper.LabelLayoutStrategy.clip, columnWidthsArr[jCount] - 10, textMeasurementService.svgEllipsis);
+                    }
+
+                }
+
                 d3.select(categoryClassLiteral + jCount)
                     .append('title').text(Gantt.getLabelValuesNew(Gantt.categoriesTitle[jCount].toString(), 'text', 50));
 
                 if (jCount !== 0) {
                     let resizer: Selection<HTMLElement>;
-                    resizer = this.drillAllGroup.append('rect').classed('resizer', true).classed(headerCellLiteral + jCount, true);
+                    resizer = this.drillAllGroup.append('rect').classed('gantt_resizer', true).classed(headerCellLiteral + jCount, true);
                     resizer.attr({
-                        x: Gantt.taskLineCoordinateX
-                        + ((Gantt.singleCharacterWidth * this.viewModel.settings.taskLabels.width + 25) * jCount) - 10,
+                        x: taskColumnArr[jCount] - 10,
                         y: 0,
                         height: '30px',
                         width: '5px',
@@ -4051,49 +4121,6 @@ module powerbi.extensibility.visual {
                         columnId: headerCellLiteral + jCount
                     });
 
-                    if (taskLabelVertGrid) {
-                        let verticleLine: Selection<HTMLElement>;
-                        verticleLine = this.drillAllGroup.append('line').classed(
-                            verticalLineSimpleLiteral + spaceLiteral + verticalLineSimpleLiteral + jCount, true);
-                        verticleLine.attr({
-                            x1: Gantt.taskLineCoordinateX
-                            + ((Gantt.singleCharacterWidth * this.viewModel.settings.taskLabels.width + 25) * jCount) - 10,
-                            y1: 0,
-                            x2: Gantt.taskLineCoordinateX
-                            + ((Gantt.singleCharacterWidth * this.viewModel.settings.taskLabels.width + 25) * jCount) - 10,
-                            y2: 30,
-                            stroke: vertGridColor
-                        });
-                    }
-                }
-            }
-            if (Gantt.sortOrder === 'desc') {
-                if (Gantt.sortLevel === 0) {
-                    this.drillAllGroup.append('image')
-                        .attr('class', 'sortAsc')
-                        .attr('class', categoryLiteral + Gantt.sortLevel)
-                        .attr('id', categoryLiteral + Gantt.sortLevel)
-                        .attr('x', Gantt.taskLineCoordinateX
-                        + ((Gantt.singleCharacterWidth * this.viewModel.settings.taskLabels.width + 25) * Gantt.sortLevel))
-                        .attr('y', 10)
-                        .attr({
-                            'xlink:href': Gantt.sortDescOrder,
-                            width: 7,
-                            height: 7
-                        });
-                } else {
-                    this.drillAllGroup.append('image')
-                        .attr('class', 'sortAsc')
-                        .attr('class', categoryLiteral + Gantt.sortLevel)
-                        .attr('id', categoryLiteral + Gantt.sortLevel)
-                        .attr('x', Gantt.taskLineCoordinateX
-                        + ((Gantt.singleCharacterWidth * this.viewModel.settings.taskLabels.width + 25) * Gantt.sortLevel))
-                        .attr('y', 10)
-                        .attr({
-                            'xlink:href': Gantt.sortDescOrder,
-                            width: 7,
-                            height: 7
-                        });
                 }
             }
 
@@ -4160,10 +4187,12 @@ module powerbi.extensibility.visual {
                     });
                 }
             }
-
             let categoryObject: string[];
             categoryObject = [];
-            for (let tasknumber: number = 0; tasknumber < tasks.length; tasknumber++) {
+            const tasksLength: number = tasks.length;
+            let yVal: number = -1;
+            let opacityValue: number = 0;
+            for (let tasknumber: number = 0; tasknumber < tasksLength; tasknumber++) {
                 let currentLevel: Task;
                 currentLevel = tasks[tasknumber];
                 thisObj = this;
@@ -4183,22 +4212,6 @@ module powerbi.extensibility.visual {
                     }
                     if (taskLabelsShow) {
                         if (isTaskLabelHierarchyView) {
-                            if (0 !== jCount) {
-                                if (taskLabelVertGrid) {
-                                    let verticleLine: Selection<HTMLElement>;
-                                    verticleLine = this.lineGroup.append('line').classed(
-                                        verticalLineSimpleLiteral + spaceLiteral + verticalLineSimpleLiteral + jCount, true);
-                                    verticleLine.attr({
-                                        x1: Gantt.taskLineCoordinateX
-                                        + ((Gantt.singleCharacterWidth * this.viewModel.settings.taskLabels.width + 25) * jCount) - 10,
-                                        y1: this.getTaskLabelCoordinateY(tasknumber) - 30,
-                                        x2: Gantt.taskLineCoordinateX
-                                        + ((Gantt.singleCharacterWidth * this.viewModel.settings.taskLabels.width + 25) * jCount) - 10,
-                                        y2: this.getTaskLabelCoordinateY(tasknumber) + 30
-                                    }).style('stroke', vertGridColor);
-                                }
-                            }
-
                             if (categoryObject[jCount] === tasks[tasknumber].name[jCount] && (totalCategories - 1) !== jCount) {
                                 continue;
                             }
@@ -4212,86 +4225,32 @@ module powerbi.extensibility.visual {
                                 if (0 === jCount) {
                                     x1Val -= 10;
                                 }
-
-                                if (taskLabelHorizGrid) {
-                                    if (jCount === totalCategories - 1) {
-                                        axisLabel.attr({
-                                            x1: x1Val - 5,
-                                            y1: this.getTaskLabelCoordinateY(tasknumber) - 15,
-                                            x2: $('.taskPanel').width(),
-                                            y2: this.getTaskLabelCoordinateY(tasknumber) - 15
-                                        }).style('stroke', horGridColor);
-                                    } else {
-                                        axisLabel.attr({
-                                            x1: x1Val - 5,
-                                            y1: this.getTaskLabelCoordinateY(tasknumber) - 15,
-                                            x2: Gantt.taskLineCoordinateX
-                                            + ((Gantt.singleCharacterWidth * this.viewModel.settings.taskLabels.width + 25)
-                                                * (jCount + 1)) - 5,
-                                            y2: this.getTaskLabelCoordinateY(tasknumber) - 15
-                                        }).style('stroke', horGridColor);
-                                    }
-                                }
-                            }
-                        } else if (taskLabelHorizGrid || taskLabelVertGrid) {
-                            if (0 !== jCount) {
-                                if (taskLabelVertGrid) {
-                                    let verticleLine: Selection<HTMLElement>;
-                                    verticleLine = this.lineGroup.append('line').classed(
-                                        verticalLineSimpleLiteral + spaceLiteral + verticalLineSimpleLiteral + jCount, true);
-                                    verticleLine.attr({
-                                        x1: Gantt.taskLineCoordinateX +
-                                        ((Gantt.singleCharacterWidth * this.viewModel.settings.taskLabels.width + 25) * jCount) - 10,
-                                        y1: this.getTaskLabelCoordinateY(tasknumber) - 30,
-                                        x2: Gantt.taskLineCoordinateX +
-                                        ((Gantt.singleCharacterWidth * this.viewModel.settings.taskLabels.width + 25) * jCount) - 10,
-                                        y2: this.getTaskLabelCoordinateY(tasknumber) + 30
-                                    }).style('stroke', vertGridColor);
-                                }
-                            }
-                            if (tasknumber !== 0) {
-                                axisLabel = this.lineGroup
-                                    .append('line')
-                                    .classed(horizontalLineSimpleLiteral + jCount, true);
-
-                                let x1Val: number = Gantt.taskLineCoordinateX +
-                                    ((Gantt.singleCharacterWidth * this.viewModel.settings.taskLabels.width + 25) * jCount) - 5;
-                                if (0 === jCount) {
-                                    x1Val -= 10;
-                                }
-                                if (taskLabelHorizGrid) {
-                                    if (jCount === totalCategories - 1) {
-                                        axisLabel.attr({
-                                            x1: x1Val - 5,
-                                            y1: this.getTaskLabelCoordinateY(tasknumber) - 15,
-                                            x2: $('.taskPanel').width(),
-                                            y2: this.getTaskLabelCoordinateY(tasknumber) - 15
-                                        }).style('stroke', horGridColor);
-                                    } else {
-                                        axisLabel.attr({
-                                            x1: x1Val - 5,
-                                            y1: this.getTaskLabelCoordinateY(tasknumber) - 15,
-                                            x2: Gantt.taskLineCoordinateX +
-                                            ((Gantt.singleCharacterWidth * this.viewModel.settings.taskLabels.width + 25) *
-                                                (jCount + 1)) - 5,
-                                            y2: this.getTaskLabelCoordinateY(tasknumber) - 15
-                                        }).style('stroke', horGridColor);
-                                    }
-                                }
                             }
                         }
                         categoryObject[jCount] = tasks[tasknumber].name[jCount];
+                        opacityValue = tasknumber % 2 === 0 ? 0.2 : 0.6;
+                        if (yVal !== thisObj.getTaskLabelCoordinateY(tasknumber)) {
+                            const greyRect: Selection<HTMLElement> = this.lineGroup.append('rect').attr({
+                                x: 0,
+                                y: thisObj.getTaskLabelCoordinateY(tasknumber) - 17,
+                                width: $('.gantt_taskSvg').width(),
+                                height: 24,
+                                fill: '#ccc',
+                                class: 'gantt_backgroundRect',
+                                opacity: opacityValue
+                            });
+                            yVal = thisObj.getTaskLabelCoordinateY(tasknumber);
+                        }
                         axisLabel = this.lineGroup
                             .append('text')
-                            .classed(Selectors.label.class, true).classed('kpiClass', true);
+                            .classed(Selectors.label.class, true).classed('gantt_kpiClass', true);
 
                         if (jCount === 0) {
                             axisLabel.attr({
-                                x: Gantt.taskLineCoordinateX +
-                                ((Gantt.singleCharacterWidth * this.viewModel.settings.taskLabels.width + 25) * jCount),
+                                x: taskColumnArr[jCount],
                                 y: this.getTaskLabelCoordinateY(tasknumber),
                                 class: Selectors.toggleTask.class + spaceLiteral
-                                + taskRowLiteral + tasknumber + spaceLiteral + taskColumnLiteral + jCount,
+                                    + taskRowLiteral + tasknumber + spaceLiteral + taskColumnLiteral + jCount,
                                 fill: taskLabelsColor,
                                 'stroke-width': Gantt.axisLabelStrokeWidth,
                                 regionAttr: regionAttr,
@@ -4300,12 +4259,12 @@ module powerbi.extensibility.visual {
                                 trancheAttr: trancheAttr
                             }).style('font-size', normalizer + pxLiteral).style('font-family', taskLabelsFontFamily);
                         } else {
+
                             axisLabel.attr({
-                                x: Gantt.taskLineCoordinateX +
-                                ((Gantt.singleCharacterWidth * this.viewModel.settings.taskLabels.width + 25) * jCount),
+                                x: taskColumnArr[jCount],
                                 y: this.getTaskLabelCoordinateY(tasknumber),
                                 class: Selectors.toggleTask.class + spaceLiteral +
-                                taskRowLiteral + tasknumber + spaceLiteral + taskColumnLiteral + jCount,
+                                    taskRowLiteral + tasknumber + spaceLiteral + taskColumnLiteral + jCount,
                                 fill: taskLabelsColor,
                                 'stroke-width': Gantt.axisLabelStrokeWidth,
                                 regionAttr: regionAttr,
@@ -4315,40 +4274,67 @@ module powerbi.extensibility.visual {
                             }).style('font-size', normalizer + pxLiteral).style('font-family', taskLabelsFontFamily);
                         }
 
-                        objects = this.viewModel.dataView.metadata.objects;
-                        getJSONString = getValue<string>(objects, 'categoryColumnsWidth', 'width', 'text');
-                        columnWidth = 0;
-                        if (getJSONString && getJSONString.length !== 0 && getJSONString.indexOf('text') === -1) {
-                            let splittedJSON: string[];
-                            splittedJSON = getJSONString.split(';');
-                            let columnName: string;
-                            columnName = columnLiteral + jCount;
-                            for (let iIterator: number = 0; iIterator < splittedJSON.length; iIterator++) {
-                                if (splittedJSON[iIterator].indexOf(columnName) !== -1) {
-                                    let oSplittedLength: string[];
-                                    oSplittedLength = splittedJSON[iIterator].split(':');
-                                    columnWidth = parseFloat(oSplittedLength[1]);
-                                }
-                            }
-                        }
                         let categoryLabel: string = tasks[tasknumber].name[jCount].toString();
+
+                        if (jCount === 0) {
+                            categoryLabel = Gantt.regionValueFormatter.format(tasks[tasknumber].name[jCount]);
+                        } else if (jCount === 1) {
+                            categoryLabel = Gantt.metroValueFormatter.format(tasks[tasknumber].name[jCount]);
+                        } else if (jCount === 2) {
+                            categoryLabel = Gantt.projectValueFormatter.format(tasks[tasknumber].name[jCount]);
+                        } else if (jCount === 3) {
+                            categoryLabel = Gantt.trancheValueFormatter.format(tasks[tasknumber].name[jCount]);
+                        }
                         if (categoryLabel === '') {
                             categoryLabel = 'N/A';
                         }
-                        if (Gantt.numberOfCategories !== 1 && columnWidth > 15) {
+
+                        if (jCount === totalCategories - 1) {
+                            lastRectX = parseInt(d3.select(dotLiteral + categoryLiteral + jCount).attr('x'), 10);
+                            if ((kpiPanelWidth > 0 && lastRectX > kpiPanelWidth - 1) || lastRectX > barPanelLeft - 1) {
+                                axisLabel.text(categoryLabel)
+                                    .call(
+                                    AxisHelper.LabelLayoutStrategy.clip,
+                                    100,
+                                    textMeasurementService.svgEllipsis);
+                            } else {
+                                axisLabel.text(categoryLabel)
+                                    .call(
+                                    AxisHelper.LabelLayoutStrategy.clip,
+                                    parseInt(d3.select('.gantt_kpiPanel').style('left'), 10) - lastRectX - 10,
+                                    textMeasurementService.svgEllipsis);
+                            }
+
+                        } else {
                             axisLabel.text(categoryLabel)
-                                .call(AxisHelper.LabelLayoutStrategy.clip, columnWidth - 20, textMeasurementService.svgEllipsis);
-                        } else if (columnWidth > 15) {
-                            axisLabel
-                                .text(categoryLabel)
-                                .call(AxisHelper.LabelLayoutStrategy.clip, columnWidth - 20, textMeasurementService.svgEllipsis);
+                                .call(
+                                AxisHelper.LabelLayoutStrategy.clip,
+                                columnWidthsArr[jCount] - 20,
+                                textMeasurementService.svgEllipsis);
                         }
-                        axisLabel.append('title').text(Gantt.getLabelValuesNew(tasks[tasknumber].name[jCount], 'title', width));
+
+                        axisLabel.append('title').text(Gantt.getLabelValuesNew(categoryLabel, 'title', width));
+
                     }
                 }
 
                 if (0 !== currentLevel.KPIValues.length) {
                     for (let jCount: number = 0; jCount < totalKPIs; jCount++) {
+                        if (jCount === 0) {
+                            thisObj.kpiGroup.append('rect').attr({
+                                x: 0,
+                                y: thisObj.getTaskLabelCoordinateY(tasknumber) - 17,
+                                height: 24,
+                                width: parseInt(d3.select('.gantt_kpiSvg').attr('width'), 10),
+                                fill: '#ccc',
+                                opacity: opacityValue
+                            })
+                                .attr('x', 0)
+                                .attr('y', thisObj.getTaskLabelCoordinateY(tasknumber) - 17)
+                                .attr('height', 24)
+                                .attr('width', parseInt(d3.select('.gantt_kpiSvg').attr('width'), 10))
+                                .attr('fill', '#ccc');
+                        }
                         if (this.viewModel.kpiData[jCount].type.toLowerCase() === 'indicator') {
                             let axisKPILabel: Selection<HTMLElement>;
                             axisKPILabel = thisObj.kpiGroup
@@ -4495,9 +4481,6 @@ module powerbi.extensibility.visual {
                                             .text(clippedText.substring(0, numberOfCharactersAllowed - 2 + iCount) + ellipsisLiteral);
                                         textTotalWidth = $('.singleCharacter').innerWidth();
                                     }
-                                    if (numberOfCharactersAllowed - 2 + (iCount - 1) < clippedText.length) {
-                                        // clippedText = text.substring(0, numberOfCharactersAllowed - 2 + (iCount - 1)) + ellipsisLiteral;
-                                    }
                                 } else {
                                     iLeftSpacing = Gantt.kpiLabelWidth / totalKPIs - textTotalWidth - 5;
                                 }
@@ -4520,10 +4503,28 @@ module powerbi.extensibility.visual {
                         }
                     }
                 }
-
-                // Render bars
-                if (currentLevel.numStart !== null) {
+            }
+            //Render bars
+            if (!Gantt.isDateData) {
+                for (let tasknumber: number = 0; tasknumber < tasksLength; tasknumber++) {
+                    let currentLevel: Task;
+                    currentLevel = tasks[tasknumber];
+                    const regionAttr: string = '';
+                    const metroAttr: string = '';
+                    const projectAttr: string = '';
+                    const trancheAttr: string = '';
                     let taskGroupSelection: Selection<HTMLElement>;
+
+                    opacityValue = tasknumber % 2 === 0 ? 0.2 : 0.6;
+                    const backgroundRectBar: Selection<HTMLElement> = thisObj.backgroundGroupBar.append('rect').attr({
+                        x: 0,
+                        y: thisObj.getTaskLabelCoordinateY(tasknumber) - 17,
+                        height: 24,
+                        width: parseInt(d3.select('.gantt_barSvg').attr('width'), 10),
+                        fill: '#ccc',
+                        opacity: opacityValue
+                    });
+
                     taskGroupSelection = thisObj.taskGroup
                         .append('g')
                         .classed(Selectors.taskGroup.class, true);
@@ -4548,37 +4549,59 @@ module powerbi.extensibility.visual {
                         .classed(Selectors.taskRect.class, true)
                         .classed(taskRowLiteral + tasknumber, true);
 
-                    taskRect
-                        .attr({
+                    if (currentLevel.numEnd !== null || currentLevel.numStart !== null) {
+                        // tslint:disable-next-line:no-any
+                        if (isNaN(thisObj.taskDurationToWidth1(currentLevel)) || isNaN(thisObj.timeScale(<any>currentLevel.numStart))) {
+                            taskRect
+                                .attr({
+                                    // tslint:disable-next-line:no-any
+                                    x: 0,
+                                    y: Gantt.getBarYCoordinate(tasknumber) + Gantt.getBarHeight() / 3,
+                                    width: 0,
+                                    height: Gantt.getBarHeight() / 1.5,
+                                    regionAttr: regionAttr,
+                                    metroAttr: metroAttr,
+                                    projectAttr: projectAttr,
+                                    trancheAttr: trancheAttr
+                                })
+                                .style('fill', currentLevel.color);
+                        } else {
+                            taskRect
+                                .attr({
+                                    // tslint:disable-next-line:no-any
+                                    x: thisObj.timeScale(<any>currentLevel.numStart),
+                                    y: Gantt.getBarYCoordinate(tasknumber) + Gantt.getBarHeight() / 3,
+                                    width: 0 === thisObj.taskDurationToWidth1(currentLevel) ? 3 :
+                                        thisObj.taskDurationToWidth1(currentLevel),
+                                    height: Gantt.getBarHeight() / 1.5,
+                                    regionAttr: regionAttr,
+                                    metroAttr: metroAttr,
+                                    projectAttr: projectAttr,
+                                    trancheAttr: trancheAttr
+                                })
+                                .style('fill', currentLevel.color);
+                        }
+
+                        yPos = Gantt.getBarYCoordinate(tasknumber) + Gantt.getBarHeight() / 2 + Gantt.taskResourcePadding;
+                        // tslint:disable-next-line:no-any
+                        if (xPos < thisObj.timeScale(<any>currentLevel.numEnd)) {
                             // tslint:disable-next-line:no-any
-                            x: thisObj.timeScale(<any>currentLevel.numStart),
-                            y: Gantt.getBarYCoordinate(tasknumber) + Gantt.getBarHeight() / 3,
-                            width: 0 === thisObj.taskDurationToWidth1(currentLevel) ? 3 : thisObj.taskDurationToWidth1(currentLevel),
-                            height: Gantt.getBarHeight() / 1.5,
-                            regionAttr: regionAttr,
-                            metroAttr: metroAttr,
-                            projectAttr: projectAttr,
-                            trancheAttr: trancheAttr
-                        })
-                        .style('fill', currentLevel.color);
-
-                    yPos = Gantt.getBarYCoordinate(tasknumber) + Gantt.getBarHeight() / 2 + Gantt.taskResourcePadding;
-                    // tslint:disable-next-line:no-any
-                    if (xPos < thisObj.timeScale(<any>currentLevel.numEnd)) {
+                            xPos = thisObj.timeScale(<any>currentLevel.numEnd);
+                            // tslint:disable-next-line:no-any
+                            xPosStart = thisObj.timeScale(<any>currentLevel.numStart);
+                        }
                         // tslint:disable-next-line:no-any
-                        xPos = thisObj.timeScale(<any>currentLevel.numEnd);
-                        // tslint:disable-next-line:no-any
-                        xPosStart = thisObj.timeScale(<any>currentLevel.numStart);
+                        if (xPos < thisObj.timeScale(<any>currentLevel.numEnd)) {
+                            // tslint:disable-next-line:no-any
+                            xPos = thisObj.timeScale(<any>currentLevel.numEnd);
+                            // tslint:disable-next-line:no-any
+                            xPosStart = thisObj.timeScale(<any>currentLevel.numStart);
+                        }
                     }
-                    // tslint:disable-next-line:no-any
-                    if (xPos < thisObj.timeScale(<any>currentLevel.numEnd)) {
-                        // tslint:disable-next-line:no-any
-                        xPos = thisObj.timeScale(<any>currentLevel.numEnd);
-                        // tslint:disable-next-line:no-any
-                        xPosStart = thisObj.timeScale(<any>currentLevel.numStart);
-                    }
-
                     thisObj.renderTooltip(eachPhaseSelection);
+                    if (currentLevel.numStart === null && currentLevel.numEnd === null) {
+                        continue;
+                    }
                     let labelnormalizer: number;
                     labelnormalizer = (thisObj.viewModel.settings.taskResource.fontSize * Gantt.maximumNormalizedFontSize)
                         / Gantt.maximumFontSize;
@@ -4632,7 +4655,26 @@ module powerbi.extensibility.visual {
                             textMeasurementService.svgEllipsis);
                         taskResource.append('title').text(currentLevel.resource);
                     }
-                } else if (currentLevel.start) {
+                }
+            } else {
+                for (let tasknumber: number = 0; tasknumber < tasksLength; tasknumber++) {
+                    let currentLevel: Task;
+                    currentLevel = tasks[tasknumber];
+                    const regionAttr: string = '';
+                    const metroAttr: string = '';
+                    const projectAttr: string = '';
+                    const trancheAttr: string = '';
+
+                    opacityValue = tasknumber % 2 === 0 ? 0.2 : 0.6;
+                    const backgroundRectBar: Selection<HTMLElement> = thisObj.backgroundGroupBar.append('rect').attr({
+                        x: 0,
+                        y: thisObj.getTaskLabelCoordinateY(tasknumber) - 17,
+                        height: 24,
+                        width: parseInt(d3.select('.gantt_barSvg').attr('width'), 10),
+                        fill: '#ccc',
+                        opacity: opacityValue
+                    });
+
                     let taskGroupSelection: Selection<HTMLElement>;
                     taskGroupSelection = thisObj.taskGroup
                         .append('g')
@@ -4676,11 +4718,13 @@ module powerbi.extensibility.visual {
 
                     yPos = Gantt.getBarYCoordinate(tasknumber) + Gantt.getBarHeight() / 2 + Gantt.taskResourcePadding;
                     if (xPos < thisObj.timeScale(currentLevel.end)) {
-                        xPos = thisObj.timeScale(currentLevel.end);
+                        xPos = thisObj.timeScale(currentLevel.start) +
+                            (0 === thisObj.taskDurationToWidth(currentLevel) ? 3 : thisObj.taskDurationToWidth(currentLevel));
                         xPosStart = thisObj.timeScale(currentLevel.start);
                     }
                     if (xPos < thisObj.timeScale(currentLevel.end)) {
-                        xPos = thisObj.timeScale(currentLevel.end);
+                        xPos = thisObj.timeScale(currentLevel.start) +
+                            (0 === thisObj.taskDurationToWidth(currentLevel) ? 3 : thisObj.taskDurationToWidth(currentLevel));
                         xPosStart = thisObj.timeScale(currentLevel.start);
                     }
 
@@ -4739,30 +4783,7 @@ module powerbi.extensibility.visual {
                         taskResource.append('title').text(currentLevel.resource);
                     }
                     let selectionManager: ISelectionManager;
-                    selectionManager = this.selectionManger;
-                } else {
-                    let taskGroupSelection: Selection<HTMLElement>;
-                    taskGroupSelection = thisObj.taskGroup
-                        .append('g')
-                        .classed(Selectors.taskGroup.class, true);
-
-                    let taskSelection: Selection<HTMLElement>;
-                    taskSelection = taskGroupSelection
-                        .append('g')
-                        .classed(Selectors.singleTask.class, true);
-
-                    let eachPhaseSelection: Selection<Task>;
-                    eachPhaseSelection = taskSelection
-                        .datum(currentLevel)
-                        .append('g')
-                        .classed(Selectors.singlePhase.class, true);
-
-                    eachPhaseSelection
-                        .append('rect')
-                        .classed(Selectors.taskRect.class, true)
-                        .classed(taskRowLiteral + tasknumber, true);
-
-                    thisObj.renderTooltip(eachPhaseSelection);
+                    selectionManager = this.selectionManager;
                 }
             }
 
@@ -4781,44 +4802,54 @@ module powerbi.extensibility.visual {
                     className = oSplittedClassNames[iIterator];
                     if (className.indexOf('task-row') !== -1) {
                         rowNumber = className.substr(8, className.length - 8);
-                        $(taskRowClassLiteral + rowNumber).addClass('higheropacity').removeClass('loweropacity');
+                        $(taskRowClassLiteral + rowNumber).addClass('gantt_higheropacity').removeClass('gantt_loweropacity');
                     }
                 }
 
                 thisObj.selectionManager.select(d.selectionId, false).then((ids: ISelectionId[]) => {
                     if (ids.length === 0) {
-                        $('.task-rect').removeClass('loweropacity').addClass('higheropacity');
-                        $('.toggle-task').removeClass('loweropacity').addClass('higheropacity');
-                        $('.kpiClass').removeClass('loweropacity').addClass('higheropacity');
-                        $('.task-resource').removeClass('loweropacity').addClass('higheropacity');
+                        $('.gantt_task-rect').removeClass('gantt_loweropacity').addClass('gantt_higheropacity');
+                        $('.gantt_toggle-task').removeClass('gantt_loweropacity').addClass('gantt_higheropacity');
+                        $('.gantt_kpiClass').removeClass('gantt_loweropacity').addClass('gantt_higheropacity');
+                        $('.gantt_task-resource').removeClass('gantt_loweropacity').addClass('gantt_higheropacity');
+                        Gantt.isSelected = false;
 
                     } else {
-                        $('.task-rect').removeClass('higheropacity').addClass('loweropacity');
-                        $('.toggle-task').removeClass('higheropacity').addClass('loweropacity');
-                        $('.kpiClass').removeClass('higheropacity').addClass('loweropacity');
-                        $('.task-resource').removeClass('higheropacity').addClass('loweropacity');
+                        $('.gantt_task-rect').removeClass('gantt_higheropacity').addClass('gantt_loweropacity');
+                        $('.gantt_toggle-task').removeClass('gantt_higheropacity').addClass('gantt_loweropacity');
+                        $('.gantt_kpiClass').removeClass('gantt_higheropacity').addClass('gantt_loweropacity');
+                        $('.gantt_task-resource').removeClass('gantt_higheropacity').addClass('gantt_loweropacity');
 
                         let sString: string;
                         sString = '';
                         let sStr: string;
                         sStr = '';
-                        if ($('.task-rect').attr('trancheAttr')) {
+                        if ($('.gantt_task-rect').attr('trancheAttr')) {
                             sString = 'trancheAttr';
-                        } else if ($('.task-rect').attr('projectAttr')) {
+                        } else if ($('.gantt_task-rect').attr('projectAttr')) {
                             sString = 'projectAttr';
-                        } else if ($('.task-rect').attr('metroAttr')) {
+                        } else if ($('.gantt_task-rect').attr('metroAttr')) {
                             sString = 'metroAttr';
-                        } else if ($('.task-rect').attr('regionAttr')) {
+                        } else if ($('.gantt_task-rect').attr('regionAttr')) {
                             sString = 'regionAttr';
                         }
                         if (sString) {
                             sStr = $(this).attr(sString);
                         }
-                        $('.toggle-task').addClass('loweropacity').removeClass('higheropacity');
-                        $(taskRowClassLiteral + rowNumber).addClass('higheropacity').removeClass('loweropacity');
+                        $('.gantt_toggle-task').addClass('gantt_loweropacity').removeClass('gantt_higheropacity');
+                        $(taskRowClassLiteral + rowNumber).addClass('gantt_higheropacity').removeClass('gantt_loweropacity');
+                        Gantt.isSelected = true;
                     }
                 });
 
+                let $LegendToggleImageId: JQuery;
+                $LegendToggleImageId = $('#LegendToggleImage');
+                if ($LegendToggleImageId.hasClass('visible')) {
+                    $LegendToggleImageId.removeClass('visible').addClass('notVisible');
+                    $LegendToggleImageId.attr('href', Gantt.drillDownImage);
+                    $('.gantt_legendIndicatorPanel').hide();
+                    $('.arrow').hide();
+                }
                 (<Event>d3.event).stopPropagation();
             });
 
@@ -4826,10 +4857,10 @@ module powerbi.extensibility.visual {
             textsHierarchy = d3.selectAll(dotLiteral + Selectors.toggleTask.class);
             // tslint:disable-next-line:cyclomatic-complexity no-any
             textsHierarchy.on('click', function (d: any): void {
-                $('.toggle-task').addClass('loweropacity');
-                $('.task-rect').addClass('loweropacity');
-                $('.kpiClass').addClass('loweropacity');
-                $('.task-resource').addClass('loweropacity');
+                $('.gantt_toggle-task').addClass('gantt_loweropacity');
+                $('.gantt_task-rect').addClass('gantt_loweropacity');
+                $('.gantt_kpiClass').addClass('gantt_loweropacity');
+                $('.gantt_task-resource').addClass('gantt_loweropacity');
 
                 let sString: string;
                 sString = '';
@@ -4854,12 +4885,20 @@ module powerbi.extensibility.visual {
                 categoryName = $(this).find('title').text();
                 let selectedSelID: ISelectionId[];
                 selectedSelID = [];
-
-                for (let i: number = 0; i < tasks.length; i++) {
+                const tasksLength2: number = tasks.length;
+                for (let i: number = 0; i < tasksLength2; i++) {
                     for (let j: number = tasks[0].name.length - 1; j >= 0; j--) {
                         if (!(tasks[i].name[j])) { continue; }
                         let currentcategory: string;
-                        currentcategory = tasks[i].name[j];
+                        if (j === 0) {
+                            currentcategory = Gantt.regionValueFormatter.format(tasks[i].name[j]);
+                        } else if (j === 1) {
+                            currentcategory = Gantt.metroValueFormatter.format(tasks[i].name[j]);
+                        } else if (j === 2) {
+                            currentcategory = Gantt.projectValueFormatter.format(tasks[i].name[j]);
+                        } else {
+                            currentcategory = Gantt.trancheValueFormatter.format(tasks[i].name[j]);
+                        }
                         let k: number = i;
                         if (currentcategory === categoryName || currentcategory.toString() === categoryName) {
                             if (Gantt.previousSel === categoryName) {
@@ -4867,19 +4906,30 @@ module powerbi.extensibility.visual {
                                     Gantt.selectionIdHash[m] = true;
                                     Gantt.previousSel = null;
                                 }
-                                $('.toggle-task').removeClass('loweropacity').addClass('higheropacity');
-                                $('.task-rect').removeClass('loweropacity').addClass('higheropacity');
-                                $('.kpiClass').removeClass('loweropacity').addClass('higheropacity');
-                                $('.task-resource').removeClass('loweropacity').addClass('higheropacity');
+                                $('.gantt_toggle-task').removeClass('gantt_loweropacity').addClass('gantt_higheropacity');
+                                $('.gantt_task-rect').removeClass('gantt_loweropacity').addClass('gantt_higheropacity');
+                                $('.gantt_kpiClass').removeClass('gantt_loweropacity').addClass('gantt_higheropacity');
+                                $('.gantt_task-resource').removeClass('gantt_loweropacity').addClass('gantt_higheropacity');
+                                Gantt.isSelected = true;
                             } else {
                                 for (let m: number = 0; m < Gantt.globalOptions.dataViews[0].categorical.categories[0].values.length; m++) {
                                     Gantt.selectionIdHash[m] = false;
                                 }
                                 k = 0;
                                 let categoryLength: number;
+                                let categoryValFormatted: string;
                                 for (categoryLength =
                                     Gantt.globalOptions.dataViews[0].categorical.categories[j].values.length; k < categoryLength; k++) {
-                                    if (tasks[k].name[j] === categoryName || tasks[k].name[j].toString() === categoryName) {
+                                    if (j === 0) {
+                                        categoryValFormatted = Gantt.regionValueFormatter.format(tasks[k].name[j]);
+                                    } else if (j === 1) {
+                                        categoryValFormatted = Gantt.metroValueFormatter.format(tasks[k].name[j]);
+                                    } else if (j === 2) {
+                                        categoryValFormatted = Gantt.projectValueFormatter.format(tasks[k].name[j]);
+                                    } else {
+                                        categoryValFormatted = Gantt.trancheValueFormatter.format(tasks[k].name[j]);
+                                    }
+                                    if (categoryValFormatted === categoryName || categoryValFormatted.toString() === categoryName) {
                                         Gantt.selectionIdHash[k] = true;
                                     }
                                 }
@@ -4896,60 +4946,84 @@ module powerbi.extensibility.visual {
                 for (let i: number = 0; i < Gantt.globalOptions.dataViews[0].categorical.categories[0].values.length; i++) {
                     if (Gantt.selectionIdHash[i] && selectionIds[i]) {
                         selectedSelID.push(selectionIds[i]);
-                        $(taskRowClassLiteral + i).addClass('higheropacity').removeClass('loweropacity');
+                        $(taskRowClassLiteral + i).addClass('gantt_higheropacity').removeClass('gantt_loweropacity');
+                        Gantt.isSelected = true;
+                    }
+                    if (selectedSelID.length === selectionIds.length || selectedSelID.length === 0) {
+                        Gantt.isSelected = false;
                     }
                 }
                 thisObj.selectionManager.select(selectedSelID).then((ids: ISelectionId[]) => {
                     if (ids.length === 0) {
-                        $('.task-rect').removeClass('loweropacity').addClass('higheropacity');
-                        $('.toggle-task').removeClass('loweropacity').addClass('higheropacity');
-                        $('.kpiClass').removeClass('loweropacity').addClass('higheropacity');
-                        $('.task-resource').removeClass('loweropacity').addClass('higheropacity');
+                        $('.gantt_task-rect').removeClass('gantt_loweropacity').addClass('gantt_higheropacity');
+                        $('.gantt_toggle-task').removeClass('gantt_loweropacity').addClass('gantt_higheropacity');
+                        $('.gantt_kpiClass').removeClass('gantt_loweropacity').addClass('gantt_higheropacity');
+                        $('.gantt_task-resource').removeClass('gantt_loweropacity').addClass('gantt_higheropacity');
+                        Gantt.isSelected = false;
                     }
                 });
+
+                let $LegendToggleImageId: JQuery;
+                $LegendToggleImageId = $('#LegendToggleImage');
+                if ($LegendToggleImageId.hasClass('visible')) {
+                    $LegendToggleImageId.removeClass('visible').addClass('notVisible');
+                    $LegendToggleImageId.attr('href', Gantt.drillDownImage);
+                    $('.gantt_legendIndicatorPanel').hide();
+                    $('.arrow').hide();
+                }
                 (<Event>d3.event).stopPropagation();
             });
 
             d3.select('html').on('click', function (): void {
-                thisObj.selectionManager.clear();
-                bars.attr({
-                    opacity: 1
-                });
-                $('.toggle-task').removeClass('loweropacity').addClass('higheropacity');
-                $('.task-rect').removeClass('loweropacity').addClass('higheropacity');
-                $('.kpiClass').removeClass('loweropacity').addClass('higheropacity');
-                $('.task-resource').removeClass('loweropacity').addClass('higheropacity');
+                if (!Gantt.isSelected) {
+                    (<Event>d3.event).stopPropagation();
+                } else {
+                    thisObj.selectionManager.clear();
+                    bars.attr({
+                        opacity: 1
+                    });
+                    $('.gantt_toggle-task').removeClass('gantt_loweropacity').addClass('gantt_higheropacity');
+                    $('.gantt_task-rect').removeClass('gantt_loweropacity').addClass('gantt_higheropacity');
+                    $('.gantt_kpiClass').removeClass('gantt_loweropacity').addClass('gantt_higheropacity');
+                    $('.gantt_task-resource').removeClass('gantt_loweropacity').addClass('gantt_higheropacity');
+                    Gantt.isSelected = false;
+                }
 
+                let $LegendToggleImageId: JQuery;
+                $LegendToggleImageId = $('#LegendToggleImage');
+                if ($LegendToggleImageId.hasClass('visible')) {
+                    $LegendToggleImageId.removeClass('visible').addClass('notVisible');
+                    $LegendToggleImageId.attr('href', Gantt.drillDownImage);
+                    $('.gantt_legendIndicatorPanel').hide();
+                    $('.arrow').hide();
+                }
             });
 
             bars.exit()
                 .remove();
-            this.setResizeData();
 
             let taskPanelWidth: number;
-            taskPanelWidth = $('.taskPanel').width();
+            taskPanelWidth = $('.gantt_taskPanel').width();
             let totalCategoryLength: number;
             totalCategoryLength = this.viewModel.tasksNew[0].name.length;
-            let lastRectX: number;
             lastRectX = parseFloat($(headerCellClassLiteral + (totalCategoryLength - 1)).attr('x'));
-            let barPanelLeft: number;
-            barPanelLeft = parseFloat(d3.select('.barPanel').style('left'));
-            let kpiPanelWidth: number;
-            kpiPanelWidth = parseFloat(d3.select('.kpiPanel').style('left'));
+            barPanelLeft = parseFloat(d3.select('.gantt_barPanel').style('left'));
+            kpiPanelWidth = parseFloat(d3.select('.gantt_kpiPanel').style('left'));
 
             d3.select(dotLiteral + Selectors.bottomTaskDiv.class).style({
                 width: PixelConverter.toString(taskPanelWidth)
             });
-            d3.select('.drillAllPanel2').style('width', PixelConverter.toString(taskPanelWidth));
 
-            if ((kpiPanelWidth > 0 && lastRectX > kpiPanelWidth) || lastRectX > barPanelLeft) {
+            d3.select('.gantt_drillAllPanel2').style('width', PixelConverter.toString(taskPanelWidth));
+            if ((kpiPanelWidth > 0 && lastRectX > kpiPanelWidth - 12) || lastRectX > barPanelLeft - 12) {
                 d3.select(dotLiteral + Selectors.bottomTaskSvg.class).style({
                     width: PixelConverter.toString(lastRectX + 100)
                 });
-                d3.select('.taskSvg').style({
+                d3.select('.gantt_taskSvg').style({
                     width: PixelConverter.toString(lastRectX + 100)
                 });
-                d3.select('.drillAllSvg2').style({
+                d3.selectAll('.gantt_backgroundRect').attr({ width: lastRectX + 100 });
+                d3.select('.gantt_drillAllSvg2').style({
                     width: PixelConverter.toString(lastRectX + 100)
                 });
                 d3.selectAll(horizontalLineClassLiteral + (totalCategoryLength - 1)).attr('x2', lastRectX + 100);
@@ -4957,10 +5031,11 @@ module powerbi.extensibility.visual {
                 d3.select(dotLiteral + Selectors.bottomTaskSvg.class).style({
                     width: PixelConverter.toString(taskPanelWidth)
                 });
-                d3.select('.taskSvg').style({
+                d3.select('.gantt_taskSvg').style({
                     width: PixelConverter.toString(taskPanelWidth)
                 });
-                d3.select('.drillAllSvg2').style({
+                d3.selectAll('.gantt_backgroundRect').attr({ width: taskPanelWidth });
+                d3.select('.gantt_drillAllSvg2').style({
                     width: PixelConverter.toString(taskPanelWidth)
                 });
             }
@@ -4980,7 +5055,7 @@ module powerbi.extensibility.visual {
             shapeName = Gantt.milestoneShapes[index];
             color = Gantt.milestoneColor[index];
             size = isForLegend ? 16 : Gantt.milestoneSize[index];
-            className = isForLegend ? 'milestoneLegend milestoneIcon' : 'actual-milestone';
+            className = isForLegend ? 'gantt_milestoneLegend gantt_milestoneIcon' : 'gantt_actual-milestone';
             switch (shapeName) {
                 case 'circle':
                     milestoneShapeSelection = selection.append('circle')
@@ -5007,8 +5082,8 @@ module powerbi.extensibility.visual {
                             stroke: 'black',
                             fill: color,
                             transform: rotateLieral + paranthesisStartLiteral + 45 +
-                            commaLiteral + (xStartPosition) + commaLiteral + (yStartPosition + Gantt.getBarHeight() / 2 +
-                                Gantt.defaultValues.ProgressBarHeight) + paranthesisEndLiteral
+                                commaLiteral + (xStartPosition) + commaLiteral + (yStartPosition + Gantt.getBarHeight() / 2 +
+                                    Gantt.defaultValues.ProgressBarHeight) + paranthesisEndLiteral
                         });
                     break;
                 case 'star':
@@ -5017,7 +5092,7 @@ module powerbi.extensibility.visual {
                             class: className,
                             points: CalculateStarPoints(xStartPosition, yStartPosition + Gantt.getBarHeight() - 8, 5, size / 2, 5),
                             transform: rotateLieral + paranthesisStartLiteral + minusLieral + 17.5 + commaLiteral + (xStartPosition) +
-                            commaLiteral + (yStartPosition + Gantt.getBarHeight() - 8) + paranthesisEndLiteral,
+                                commaLiteral + (yStartPosition + Gantt.getBarHeight() - 8) + paranthesisEndLiteral,
                             fill: color,
                             stroke: 'black'
                         });
@@ -5230,7 +5305,7 @@ module powerbi.extensibility.visual {
             zLiteral = 'Z';
             minusLiteral = '-';
             rotateLieral = 'rotate';
-            this.todayGroup.html('');
+            this.todayGroup.selectAll('*').remove();
             if (this.viewModel.settings.dateType.enableToday) {
                 let x: number;
                 x = this.timeScale(new Date(todayDate)) + 10;
@@ -5239,9 +5314,9 @@ module powerbi.extensibility.visual {
                     .classed(Selectors.todayIndicator.class, true)
                     .attr({
                         d: mLiteral + x1 + spaceLiteral + y1 + spaceLiteral + lLiteral + x2 + spaceLiteral +
-                        y2 + spaceLiteral + lLiteral + x3 + spaceLiteral + y3 + spaceLiteral + zLiteral,
+                            y2 + spaceLiteral + lLiteral + x3 + spaceLiteral + y3 + spaceLiteral + zLiteral,
                         transform: rotateLieral + paranthesisStartLiteral + minusLiteral + 90 + commaLiteral +
-                        xposition + commaLiteral + yposition + paranthesisEndLiteral
+                            xposition + commaLiteral + yposition + paranthesisEndLiteral
                     })
                     .style({
                         fill: 'red'
@@ -5305,7 +5380,11 @@ module powerbi.extensibility.visual {
                     return Gantt.enumerateColumnHeader(settings);
                 }
                 case 'taskResource': {
-                    return Gantt.enumerateTaskResource(settings);
+                    if (Gantt.isChartHasDataLabels(this.viewModel.dataView)) {
+                        return Gantt.enumerateTaskResource(settings);
+                    } else {
+                        return null;
+                    }
                 }
                 case 'dateType': {
                     if (Gantt.isDateData) {
@@ -5362,51 +5441,19 @@ module powerbi.extensibility.visual {
                     fontSize: taskLabelsSettings.fontSize,
                     fontFamily: taskLabelsSettings.fontFamily,
                     isExpanded: taskLabelsSettings.isExpanded,
-                    isHierarchy: taskLabelsSettings.isHierarchy,
-                    vertGrid: taskLabelsSettings.vertGrid,
-                    horizGrid: taskLabelsSettings.horizGrid
+                    isHierarchy: taskLabelsSettings.isHierarchy
                 }
             }];
 
-            if (taskLabelsSettings.vertGrid && taskLabelsSettings.horizGrid) {
-                instances[0].properties = {
-                    show: taskLabelsSettings.show,
-                    fill: taskLabelsSettings.fill,
-                    fontSize: taskLabelsSettings.fontSize,
-                    fontFamily: taskLabelsSettings.fontFamily,
-                    isExpanded: taskLabelsSettings.isExpanded,
-                    isHierarchy: taskLabelsSettings.isHierarchy,
-                    vertGrid: taskLabelsSettings.vertGrid,
-                    fill2: taskLabelsSettings.fill2,
-                    horizGrid: taskLabelsSettings.horizGrid,
-                    fill3: taskLabelsSettings.fill3
-                };
-            } else if (taskLabelsSettings.vertGrid) {
-                instances[0].properties = {
-                    show: taskLabelsSettings.show,
-                    fill: taskLabelsSettings.fill,
-                    fontSize: taskLabelsSettings.fontSize,
-                    fontFamily: taskLabelsSettings.fontFamily,
-                    isExpanded: taskLabelsSettings.isExpanded,
-                    isHierarchy: taskLabelsSettings.isHierarchy,
-                    vertGrid: taskLabelsSettings.vertGrid,
-                    fill2: taskLabelsSettings.fill2,
-                    horizGrid: taskLabelsSettings.horizGrid
-                };
-            } else if (taskLabelsSettings.horizGrid) {
+            instances[0].properties = {
+                show: taskLabelsSettings.show,
+                fill: taskLabelsSettings.fill,
+                fontSize: taskLabelsSettings.fontSize,
+                fontFamily: taskLabelsSettings.fontFamily,
+                isExpanded: taskLabelsSettings.isExpanded,
+                isHierarchy: taskLabelsSettings.isHierarchy
 
-                instances[0].properties = {
-                    show: taskLabelsSettings.show,
-                    fill: taskLabelsSettings.fill,
-                    fontSize: taskLabelsSettings.fontSize,
-                    fontFamily: taskLabelsSettings.fontFamily,
-                    isExpanded: taskLabelsSettings.isExpanded,
-                    isHierarchy: taskLabelsSettings.isHierarchy,
-                    vertGrid: taskLabelsSettings.vertGrid,
-                    horizGrid: taskLabelsSettings.horizGrid,
-                    fill3: taskLabelsSettings.fill3
-                };
-            }
+            };
 
             return instances;
         }

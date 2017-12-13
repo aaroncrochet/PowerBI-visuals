@@ -77,7 +77,7 @@
           ],
           "dataReductionAlgorithm": {
             "top": {
-              "count": 30000000
+              "count": 1000
             }
           }
         },
@@ -106,7 +106,7 @@
           ],
           "dataReductionAlgorithm": {
             "top": {
-              "count": 30000000
+              "count": 1000
             }
           }
         }
@@ -342,13 +342,11 @@
             "enumeration": [
               {
                 "value": "Arial",
-                "displayName": "Arial",
-                "font-family": "Arial"
+                "displayName": "Arial"
               },
               {
                 "value": "Arial Black",
-                "displayName": "Arial Black",
-                "font-family": "Arial Black"
+                "displayName": "Arial Black"
               },
               {
                 "value": "Arial Unicode MS",
@@ -454,38 +452,6 @@
           "type": {
             "bool": true
           }
-        },
-        "vertGrid": {
-          "displayName": "Vert grid",
-          "type": {
-            "bool": true
-          }
-        },
-        "fill2": {
-          "displayName": "Vert grid color",
-          "type": {
-            "fill": {
-              "solid": {
-                "color": true
-              }
-            }
-          }
-        },
-        "horizGrid": {
-          "displayName": "Horiz grid",
-          "type": {
-            "bool": true
-          }
-        },
-        "fill3": {
-          "displayName": "Horiz grid color",
-          "type": {
-            "fill": {
-              "solid": {
-                "color": true
-              }
-            }
-          }
         }
       }
     },
@@ -509,7 +475,7 @@
               },
               {
                 "value": "Top",
-                "displayName": "Top"
+                "displayName": "Center"
               },
               {
                 "value": "Right",
@@ -543,13 +509,11 @@
             "enumeration": [
               {
                 "value": "Arial",
-                "displayName": "Arial",
-                "font-family": "Arial"
+                "displayName": "Arial"
               },
               {
                 "value": "Arial Black",
-                "displayName": "Arial Black",
-                "font-family": "Arial Black"
+                "displayName": "Arial Black"
               },
               {
                 "value": "Arial Unicode MS",
@@ -763,15 +727,13 @@
         "interval": {
           "displayName": "Interval",
           "type": {
-            "formatting": {
-              "fontSize": true
-            }
+            "text": true
           }
         }
       }
     },
     "displayRatio": {
-      "displayName": "Display Ratio",
+      "displayName": "Display ratio",
       "description": "Aspect ratio of category labels and gantt chart",
       "properties": {
         "ratio": {
@@ -793,10 +755,10 @@
             "text": true
           }
         },
-        "isResizeStarted": {
+        "categoryLength": {
           "displayName": "Resize started",
           "type": {
-            "text": true
+            "numeric": true
           }
         }
       }
